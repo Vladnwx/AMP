@@ -127,7 +127,7 @@
                 android:id="@+id/spinner_sposob_prokladki"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"/>
         </LinearLayout>
 
         <LinearLayout
@@ -226,11 +226,10 @@
             tools:ignore="ExtraText,MissingConstraints">
 
             <Button
-                android:id="@+id/button_dopustimiytok"
+                android:id="@+id/button_dopustimiy_tok"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Найти допустимы ток" />
-
+                android:text="Найти сечение по допустимому току" />
         </LinearLayout>
 
         <LinearLayout
@@ -266,7 +265,7 @@
                 android:id="@+id/button_minimalynoyesechenie"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Найти минимальное сечение" />
+                android:text="Найти ток по сечению" />
 
         </LinearLayout>
 
@@ -275,7 +274,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:ignore="ExtraText,MissingConstraints">
-
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="Мощность" />
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -283,13 +287,59 @@
                 android:layout_marginRight="5dp"
                 android:inputType="numberDecimal"
                 android:text="0" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text=", кВт" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="Напряжение" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:inputType="numberDecimal"
+                android:text="0" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text=", В" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="Число фаз" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="0" />
+
+
+            </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayout15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="ExtraText,MissingConstraints">
+
 
             <Button
                 android:id="@+id/button_naytipomochnosti"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Я в этом не разбираюсь, я знаю только мощность" />
-
+                android:text="Я в этом не разбираюсь, я знаю только мощность и количество фаз" />
         </LinearLayout>
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
