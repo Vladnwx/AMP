@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">AMP</string>
+    <string name="chislophse">Число фаз</string>
+    <string name="voltage">Напряжение</string>
+    <string name="V">, В</string>
+    <string name="power">Мощность</string>
+    <string name="nol">0</string>
+    <string name="kvt">, кВт</string>
+    <string name="raschetniytok">Расчетный ток</string>
+    <string name="nol_a">0, A</string>
+    <string name="podobratykabel">Подобрать кабель</string>
+    <string name="secheniejili">Сечение жилы</string>
+    <string name="_3x1_5">3x1.5</string>
+    <string name="dopustimiytok">Допустимый ток</string>
+    <string name="_380">380</string>
+    <string name="cos_phi">COS(phi)</string>
+    <string name="odin">1</string>
 </resources>

@@ -1,12 +1,9 @@
 package com.amp.amp;
 
-import androidx.room.Entity;
-import androidx.room.PrimaryKey;
-
-@Entity
+//@Entity
 public class type_of_environment {
-    @PrimaryKey
-    public String [] type_of_environment;
+    ///@PrimaryKey
+    public String [] type_of_environment1;
   /*  public String [] insulation_type = {"PVC", "Polyetilen"};
     public String [] material_type = {"Cu", "Al"};
     public String [] nominal_size;
