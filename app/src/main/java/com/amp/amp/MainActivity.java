@@ -126,13 +126,15 @@ public class MainActivity extends Activity implements View.OnClickListener {
             if (TextUtils.isEmpty(EditText_voltage.getText().toString()) || voltage == 220d) {
                 voltage = 380;
                 EditText_voltage.setText(String.valueOf(voltage));
-            } else {
-                if (TextUtils.isEmpty(EditText_voltage.getText().toString()) || voltage == 3801d) {
-                    voltage = 220;
-                    EditText_voltage.setText(String.valueOf(voltage));
-                }
+            }
+            }
+        else {
+            if (TextUtils.isEmpty(EditText_voltage.getText().toString()) || voltage == 380d) {
+                voltage = 220;
+                EditText_voltage.setText(String.valueOf(voltage));
             }
         }
+
         power = Double.parseDouble(EditText_power.getText().toString());
 
 
