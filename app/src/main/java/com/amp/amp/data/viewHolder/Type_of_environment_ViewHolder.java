@@ -21,7 +21,7 @@ public class Type_of_environment_ViewHolder extends RecyclerView.ViewHolder {
         type_of_environmentItemView.setText(text);
     }
 
-    static Type_of_environment_ViewHolder create(ViewGroup parent) {
+    public static Type_of_environment_ViewHolder create(ViewGroup parent) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.recyclerview_item, parent, false);
         return new Type_of_environment_ViewHolder(view);
