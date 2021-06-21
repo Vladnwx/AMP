@@ -8,5 +8,17 @@ import androidx.room.PrimaryKey;
 public class Nominal_size {
     @PrimaryKey
     @NonNull
-    public int value;
+    private int value;
+
+    public Nominal_size(int value) {
+        this.value = value;
+    }
+
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
+    }
 }

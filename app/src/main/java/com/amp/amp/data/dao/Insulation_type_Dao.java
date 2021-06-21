@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
+import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Update;
 
@@ -16,7 +17,13 @@ public interface Insulation_type_Dao {
     @Query("SELECT * FROM insulation_type")
     LiveData<List<Insulation_type>> getAll();
 
-    @Insert
+ /*   @Query("SELECT * FROM insulation_type ORDER BY insulation_type ASC")
+    LiveData<List<Insulation_type>> getAlphabetizedInsulation_type();
+*/
+    @Query("DELETE FROM insulation_type")
+    void deleteAll();
+
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     void insert(Insulation_type insulation_type);
 
     @Update

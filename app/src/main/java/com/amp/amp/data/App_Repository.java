@@ -47,12 +47,7 @@ public class App_Repository {
     private LiveData<List<Amperage>> mAllAmperage;
 
 
-    // Note that in order to unit test the WordRepository, you have to remove the Application
-    // dependency. This adds complexity and much more code, and this sample is not about testing.
-    // See the BasicSample in the android-architecture-components repository at
-    // https://github.com/googlesamples
-
-    public App_Repository(Application application) {
+     public App_Repository(Application application) {
         App_Database db = App_Database.getDatabase(application);
 
         mType_of_environment_Dao = db.type_of_environment_Dao();
@@ -78,11 +73,7 @@ public class App_Repository {
 
     }
 
-    // Room executes all queries on a separate thread.
-    // Observed LiveData will notify the observer when the data has changed.
-    public LiveData<List<Type_of_environment>> getAllType_of_environments() {
-        return mAllType_of_environment;
-    }
+    public LiveData<List<Type_of_environment>> getAllType_of_environments() { return mAllType_of_environment; }
     public LiveData<List<Type_amperage>> getAllType_amperages() {
         return mAllType_amperage;
     }

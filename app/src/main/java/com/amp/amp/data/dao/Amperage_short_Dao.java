@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
+import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Update;
 
@@ -16,7 +17,13 @@ public interface Amperage_short_Dao {
     @Query("SELECT * FROM amperage_short")
     LiveData<List<Amperage_short>> getAll();
 
-    @Insert
+    @Query("SELECT * FROM amperage_short ORDER BY amperage_short ASC")
+    LiveData<List<Amperage_short>> getAlphabetizedAmperage_short();
+
+    @Query("DELETE FROM amperage_short")
+    void deleteAll();
+
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     void insert(Amperage_short amperage_short);
 
     @Update

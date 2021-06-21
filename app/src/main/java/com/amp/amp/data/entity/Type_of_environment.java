@@ -8,5 +8,15 @@ import androidx.room.PrimaryKey;
 public class Type_of_environment {
     @PrimaryKey
     @NonNull
-    public String value;
+    private String value;
+    public Type_of_environment(@NonNull String value) {
+        this.value = value;
+    }
+    @NonNull
+    public String getValue() {
+        return value;
+    }
+    public void setValue(@NonNull String value) {
+        this.value = value;
+    }
 }

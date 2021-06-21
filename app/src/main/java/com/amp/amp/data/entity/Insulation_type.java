@@ -8,5 +8,14 @@ import androidx.room.PrimaryKey;
 public class Insulation_type {
     @PrimaryKey
     @NonNull
-    public String value;
+    private String value;
+    public Insulation_type(@NonNull String value) {
+        this.value = value;
+    }
+    public String getValue() {
+        return value;
+    }
+    public void setValue(@NonNull String value) {
+        this.value = value;
+    }
 }

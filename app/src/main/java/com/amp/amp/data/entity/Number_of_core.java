@@ -8,5 +8,16 @@ import androidx.room.PrimaryKey;
 public class Number_of_core {
     @PrimaryKey
     @NonNull
-    public String value;
+    private String value;
+
+    public Number_of_core(@NonNull String value) {
+        this.value = value;
+    }
+    @NonNull
+    public String getValue() {
+        return value;
+    }
+    public void setValue(@NonNull String value) {
+        this.value = value;
+    }
 }

@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
+import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Update;
 
@@ -16,7 +17,14 @@ public interface Short_current_Dao {
     @Query("SELECT * FROM short_current")
     LiveData<List<Short_current>> getAll();
 
-    @Insert
+  /*  @Query("SELECT * FROM short_current ORDER BY short_current ASC")
+    LiveData<List<Short_current>> getAlphabetizedShort_current();
+*/
+    @Query("DELETE FROM short_current")
+    void deleteAll();
+
+
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     void insert(Short_current short_current);
 
     @Update

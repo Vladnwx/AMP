@@ -8,5 +8,18 @@ import androidx.room.PrimaryKey;
 public class Material_type {
     @PrimaryKey
     @NonNull
-    public String value;
+    private String value;
+
+    public Material_type(@NonNull String value) {
+        this.value = value;
+    }
+
+    @NonNull
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(@NonNull String value) {
+        this.value = value;
+    }
 }
