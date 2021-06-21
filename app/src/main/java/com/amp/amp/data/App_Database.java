@@ -64,6 +64,7 @@ public abstract class App_Database extends RoomDatabase {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
                             App_Database.class, "amperage.db")
                             .addCallback(sRoomDatabaseCallback)
+                            .createFromAsset("amperage.db")
                             .build();
                 }
             }
