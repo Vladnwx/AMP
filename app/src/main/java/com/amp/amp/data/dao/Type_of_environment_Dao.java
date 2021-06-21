@@ -1,4 +1,4 @@
-package com.amp.amp.data;
+package com.amp.amp.data.dao;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
@@ -6,6 +6,8 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
+
+import com.amp.amp.data.entity.Type_of_environment;
 
 import java.util.List;
 

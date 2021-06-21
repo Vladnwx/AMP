@@ -6,6 +6,25 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
+import com.amp.amp.data.dao.Amperage_Dao;
+import com.amp.amp.data.dao.Amperage_short_Dao;
+import com.amp.amp.data.dao.Insulation_type_Dao;
+import com.amp.amp.data.dao.Material_type_Dao;
+import com.amp.amp.data.dao.Nominal_size_Dao;
+import com.amp.amp.data.dao.Number_of_cores_Dao;
+import com.amp.amp.data.dao.Short_current_Dao;
+import com.amp.amp.data.dao.Type_amperage_Dao;
+import com.amp.amp.data.dao.Type_of_environment_Dao;
+import com.amp.amp.data.entity.Amperage;
+import com.amp.amp.data.entity.Amperage_short;
+import com.amp.amp.data.entity.Insulation_type;
+import com.amp.amp.data.entity.Material_type;
+import com.amp.amp.data.entity.Nominal_size;
+import com.amp.amp.data.entity.Number_of_core;
+import com.amp.amp.data.entity.Short_current;
+import com.amp.amp.data.entity.Type_amperage;
+import com.amp.amp.data.entity.Type_of_environment;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -13,7 +32,7 @@ import java.util.concurrent.Executors;
         Type_of_environment.class,
         Type_amperage.class,
         Short_current.class,
-        Number_of_cores.class,
+        Number_of_core.class,
         Nominal_size.class,
         Material_type.class,
         Insulation_type.class,

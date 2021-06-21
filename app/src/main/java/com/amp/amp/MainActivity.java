@@ -11,6 +11,10 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.amp.amp.view.Type_of_environment_ViewModel;
+
 public class MainActivity extends Activity implements View.OnClickListener {
     double phase;
     double power;
@@ -23,6 +27,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
     EditText EditText_cos;
     TextView TextView_current;
     Spinner spinner_phase_count;
+    public static final int NEW_ACTIVITY_REQUEST_CODE = 1;
+    private Type_of_environment_ViewModel mType_of_environment_ViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +46,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
         type_of_environment2.value = "Earth";
         type_of_environment_Dao.insert(type_of_environment2);
         LiveData<List<Type_of_environment>> type_of_environments = type_of_environment_Dao.getAll();*/
+        RecyclerView recyclerView = findViewById(R.id.recyclerview);
+
+
+
 
         ArrayAdapter<String> adapter_phase_count = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, new String[]{"1", "2", "3"});
         adapter_phase_count.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

@@ -4,6 +4,25 @@ import android.app.Application;
 
 import androidx.lifecycle.LiveData;
 
+import com.amp.amp.data.dao.Amperage_Dao;
+import com.amp.amp.data.dao.Amperage_short_Dao;
+import com.amp.amp.data.dao.Insulation_type_Dao;
+import com.amp.amp.data.dao.Material_type_Dao;
+import com.amp.amp.data.dao.Nominal_size_Dao;
+import com.amp.amp.data.dao.Number_of_cores_Dao;
+import com.amp.amp.data.dao.Short_current_Dao;
+import com.amp.amp.data.dao.Type_amperage_Dao;
+import com.amp.amp.data.dao.Type_of_environment_Dao;
+import com.amp.amp.data.entity.Amperage;
+import com.amp.amp.data.entity.Amperage_short;
+import com.amp.amp.data.entity.Insulation_type;
+import com.amp.amp.data.entity.Material_type;
+import com.amp.amp.data.entity.Nominal_size;
+import com.amp.amp.data.entity.Number_of_core;
+import com.amp.amp.data.entity.Short_current;
+import com.amp.amp.data.entity.Type_amperage;
+import com.amp.amp.data.entity.Type_of_environment;
+
 import java.util.List;
 
 public class App_Repository {
@@ -20,7 +39,7 @@ public class App_Repository {
     private LiveData<List<Type_of_environment>> mAllType_of_environment;
     private LiveData<List<Type_amperage>> mAllType_amperage;
     private LiveData<List<Short_current>> mAllShort_current;
-    private LiveData<List<Number_of_cores>> mAllNumber_of_cores;
+    private LiveData<List<Number_of_core>> mAllNumber_of_cores;
     private LiveData<List<Nominal_size>> mAllNominal_size;
     private LiveData<List<Material_type>> mAllMaterial_type;
     private LiveData<List<Insulation_type>> mAllInsulation_type;
@@ -64,28 +83,28 @@ public class App_Repository {
     public LiveData<List<Type_of_environment>> getAllType_of_environments() {
         return mAllType_of_environment;
     }
-    LiveData<List<Type_amperage>> getAllType_amperages() {
+    public LiveData<List<Type_amperage>> getAllType_amperages() {
         return mAllType_amperage;
     }
-    LiveData<List<Short_current>> getAllShort_currents() {
+    public LiveData<List<Short_current>> getAllShort_currents() {
         return mAllShort_current;
     }
-    LiveData<List<Number_of_cores>> getAllNumber_of_coress() {
+    public LiveData<List<Number_of_core>> getAllNumber_of_coress() {
         return mAllNumber_of_cores;
     }
-    LiveData<List<Nominal_size>> getAllNominal_sizes() {
+    public LiveData<List<Nominal_size>> getAllNominal_sizes() {
         return mAllNominal_size;
     }
-    LiveData<List<Material_type>> getAllMaterial_types() {
+    public LiveData<List<Material_type>> getAllMaterial_types() {
         return mAllMaterial_type;
     }
-    LiveData<List<Insulation_type>> getAllInsulation_types() {
+    public LiveData<List<Insulation_type>> getAllInsulation_types() {
         return mAllInsulation_type;
     }
-    LiveData<List<Amperage_short>> getAllAmperage_shorts() {
+    public LiveData<List<Amperage_short>> getAllAmperage_shorts() {
         return mAllAmperage_short;
     }
-    LiveData<List<Amperage>> getAllAmperages() {
+    public LiveData<List<Amperage>> getAllAmperages() {
         return mAllAmperage;
     }
 
@@ -107,9 +126,9 @@ public class App_Repository {
             mShort_current_Dao.insert(short_current);
         });
     }
-    public void insert(Number_of_cores number_of_cores) {
+    public void insert(Number_of_core number_of_core) {
         App_Database.databaseWriteExecutor.execute(() -> {
-            mNumber_of_cores_Dao.insert(number_of_cores);
+            mNumber_of_cores_Dao.insert(number_of_core);
         });
     }
     public void insert(Nominal_size nominal_size) {

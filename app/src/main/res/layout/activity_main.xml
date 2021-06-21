@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,21 +10,38 @@
     android:textSize="24sp"
     >
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:listitem="@layout/recyclerview_item"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/add_word"
+        tools:ignore="MissingConstraints" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center"
         android:orientation="vertical"
         android:textAlignment="center"
-        android:gravity="center">
+        tools:layout_editor_absoluteX="119dp"
+        tools:layout_editor_absoluteY="41dp">
 
         <LinearLayout
             android:id="@+id/linearLayout_phase"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20sp"
             android:gravity="center"
             android:textAlignment="center"
-            tools:ignore="ExtraText,MissingConstraints"
-            android:layout_marginBottom="20sp">>
+            tools:ignore="ExtraText,MissingConstraints">>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -50,9 +68,9 @@
             android:id="@+id/linearLayout_voltage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20sp"
             android:gravity="center"
-            android:textAlignment="center"
-            android:layout_marginBottom="20sp">
+            android:textAlignment="center">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -70,13 +88,12 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:gravity="center"
                 android:autofillHints="true"
+                android:gravity="center"
                 android:hint="@string/_380"
                 android:inputType="numberDecimal"
                 android:textAlignment="center"
-                android:textSize="24sp"
-                />
+                android:textSize="24sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -128,9 +145,9 @@
             android:id="@+id/linearLayout_power"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20sp"
             android:gravity="center"
-            android:textAlignment="center"
-            android:layout_marginBottom="20sp">
+            android:textAlignment="center">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -149,8 +166,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:gravity="center"
                 android:autofillHints="true"
+                android:gravity="center"
                 android:hint="@string/nol"
                 android:inputType="numberDecimal"
                 android:textAlignment="center"
@@ -172,10 +189,10 @@
             android:id="@+id/linearLayout_currentcount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20sp"
             android:baselineAligned="false"
             android:gravity="center"
-            android:textAlignment="center"
-            android:layout_marginBottom="20sp">
+            android:textAlignment="center">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -204,9 +221,9 @@
             android:id="@+id/linearLayout5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20sp"
             android:gravity="center"
-            android:textAlignment="center"
-            android:layout_marginBottom="20sp">
+            android:textAlignment="center">
 
             <Button
                 android:id="@+id/button_naytipomochnosti"
@@ -226,9 +243,9 @@
             android:id="@+id/linearLayout_cable"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20sp"
             android:gravity="center"
-            android:textAlignment="center"
-            android:layout_marginBottom="20sp">
+            android:textAlignment="center">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -256,10 +273,10 @@
             android:id="@+id/linearLayout_currentget"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20sp"
             android:baselineAligned="false"
             android:gravity="center"
-            android:textAlignment="center"
-            android:layout_marginBottom="20sp">
+            android:textAlignment="center">
 
             <TextView
                 android:layout_width="wrap_content"

@@ -1,11 +1,11 @@
-package com.amp.amp.data;
+package com.amp.amp.data.entity;
 
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity
-public class Short_current {
+public class Number_of_core {
     @PrimaryKey
     @NonNull
     public String value;
