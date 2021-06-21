@@ -33,7 +33,7 @@ public class App_Repository {
     // See the BasicSample in the android-architecture-components repository at
     // https://github.com/googlesamples
 
-    App_Repository(Application application) {
+    public App_Repository(Application application) {
         App_Database db = App_Database.getDatabase(application);
 
         mType_of_environment_Dao = db.type_of_environment_Dao();
@@ -61,7 +61,7 @@ public class App_Repository {
 
     // Room executes all queries on a separate thread.
     // Observed LiveData will notify the observer when the data has changed.
-    LiveData<List<Type_of_environment>> getAllType_of_environments() {
+    public LiveData<List<Type_of_environment>> getAllType_of_environments() {
         return mAllType_of_environment;
     }
     LiveData<List<Type_amperage>> getAllType_amperages() {
@@ -92,47 +92,47 @@ public class App_Repository {
     // You must call this on a non-UI thread or your app will throw an exception. Room ensures
     // that you're not doing any long running operations on the main thread, blocking the UI.
 
-    void insert(Type_of_environment type_of_environment) {
+    public void insert(Type_of_environment type_of_environment) {
         App_Database.databaseWriteExecutor.execute(() -> {
             mType_of_environment_Dao.insert(type_of_environment);
         });
     }
-    void insert(Type_amperage type_amperage) {
+    public void insert(Type_amperage type_amperage) {
         App_Database.databaseWriteExecutor.execute(() -> {
             mType_amperage_Dao.insert(type_amperage);
         });
     }
-    void insert(Short_current short_current) {
+    public void insert(Short_current short_current) {
         App_Database.databaseWriteExecutor.execute(() -> {
             mShort_current_Dao.insert(short_current);
         });
     }
-    void insert(Number_of_cores number_of_cores) {
+    public void insert(Number_of_cores number_of_cores) {
         App_Database.databaseWriteExecutor.execute(() -> {
             mNumber_of_cores_Dao.insert(number_of_cores);
         });
     }
-    void insert(Nominal_size nominal_size) {
+    public void insert(Nominal_size nominal_size) {
         App_Database.databaseWriteExecutor.execute(() -> {
             mNominal_size_Dao.insert(nominal_size);
         });
     }
-    void insert(Material_type material_type) {
+    public void insert(Material_type material_type) {
         App_Database.databaseWriteExecutor.execute(() -> {
             mMaterial_type_Dao.insert(material_type);
         });
     }
-    void insert(Insulation_type insulation_type) {
+    public void insert(Insulation_type insulation_type) {
         App_Database.databaseWriteExecutor.execute(() -> {
             mInsulation_type_Dao.insert(insulation_type);
         });
     }
-    void insert(Amperage_short amperage_short) {
+    public void insert(Amperage_short amperage_short) {
         App_Database.databaseWriteExecutor.execute(() -> {
             mAmperage_short_Dao.insert(amperage_short);
         });
     }
-    void insert(Amperage amperage) {
+    public void insert(Amperage amperage) {
         App_Database.databaseWriteExecutor.execute(() -> {
             mAmperage_Dao.insert(amperage);
         });
