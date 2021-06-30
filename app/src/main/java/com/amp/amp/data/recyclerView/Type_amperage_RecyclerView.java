@@ -9,21 +9,21 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.amp.amp.R;
 
-public class Type_of_environmentViewHolder extends RecyclerView.ViewHolder {
-    private final TextView Type_of_environmentItemView;
+public class Type_amperage_RecyclerView extends RecyclerView.ViewHolder {
+    private final TextView type_amperageItemView;
 
-    private Type_of_environmentViewHolder(View itemView) {
+    private Type_amperage_RecyclerView(View itemView) {
         super(itemView);
-        Type_of_environmentItemView = itemView.findViewById(R.id.textView);
+        type_amperageItemView = itemView.findViewById(R.id.textView);
     }
 
     public void bind(String text) {
-        Type_of_environmentItemView.setText(text);
+        type_amperageItemView.setText(text);
     }
 
-    public static Type_of_environmentViewHolder create(ViewGroup parent) {
+    public static Type_amperage_RecyclerView create(ViewGroup parent) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.recyclerview_item, parent, false);
-        return new Type_of_environmentViewHolder(view);
+        return new Type_amperage_RecyclerView(view);
     }
 }

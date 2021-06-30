@@ -1,0 +1,30 @@
+package com.amp.amp.data.viewHolder;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.amp.amp.R;
+
+public class Type_amperage_ViewHolder extends RecyclerView.ViewHolder {
+    public final TextView type_amperagesItemView;
+
+    public Type_amperage_ViewHolder(View itemView) {
+        super(itemView);
+        type_amperagesItemView = itemView.findViewById(R.id.textView);
+    }
+
+    public void bind(String text) {
+        type_amperagesItemView.setText(text);
+    }
+
+    public static Type_amperage_ViewHolder create(ViewGroup parent) {
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.recyclerview_item, parent, false);
+        return new Type_amperage_ViewHolder(view);
+    }
+
+}
