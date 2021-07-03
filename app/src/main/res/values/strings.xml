@@ -16,4 +16,5 @@
     <string name="cos_phi">COS(phi)</string>
     <string name="odin">1</string>
     <string name="add_word">add_word</string>
+    <string name="empty_not_saved">Не сохранено</string>
 </resources>

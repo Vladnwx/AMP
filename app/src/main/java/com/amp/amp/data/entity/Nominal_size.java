@@ -17,8 +17,12 @@ public class Nominal_size {
     public int getValue() {
         return value;
     }
+    public String getValueString() {
+        return String.valueOf(value);
+    }
 
     public void setValue(int value) {
         this.value = value;
     }
+
 }

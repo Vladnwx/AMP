@@ -1,7 +1,7 @@
 package com.amp.amp;
 
 
-import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -10,12 +10,22 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelStoreOwner;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.amp.amp.data.adapter.Type_of_environment_ListAdapter;
+import com.amp.amp.data.entity.Type_of_environment;
+import com.amp.amp.newActivity.NewWordActivity;
 import com.amp.amp.view.Type_of_environment_ViewModel;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class MainActivity extends Activity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     double phase;
     double power;
     double voltage;
@@ -30,11 +40,36 @@ public class MainActivity extends Activity implements View.OnClickListener {
     public static final int NEW_ACTIVITY_REQUEST_CODE = 1;
     private Type_of_environment_ViewModel mType_of_environment_ViewModel;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-       /* App_Database db =  Room.databaseBuilder(getApplicationContext(),
+
+        RecyclerView recyclerView = findViewById(R.id.recyclerview);
+        final Type_of_environment_ListAdapter type_of_environment_ListAdapter = new Type_of_environment_ListAdapter(new Type_of_environment_ListAdapter.Type_of_environmentDiff());
+        recyclerView.setAdapter(type_of_environment_ListAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+// Get a new or existing ViewModel from the ViewModelProvider.
+        mType_of_environment_ViewModel = new ViewModelProvider((ViewModelStoreOwner) this).get(Type_of_environment_ViewModel.class);
+
+        // Add an observer on the LiveData returned by getAlphabetizedWords.
+        // The onChanged() method fires when the observed data changes and the activity is
+        // in the foreground.
+        mType_of_environment_ViewModel.getAll().observe((LifecycleOwner) this, type_of_environment -> {
+            // Update the cached copy of the words in the adapter.
+            type_of_environment_ListAdapter.submitList(type_of_environment);
+        });
+
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, NewWordActivity.class);
+            startActivityForResult(intent, NEW_ACTIVITY_REQUEST_CODE);
+        });
+
+
+
+        /* App_Database db =  Room.databaseBuilder(getApplicationContext(),
                 App_Database.class, "amperage.db")
                 .allowMainThreadQueries()
                 .build();
@@ -46,9 +81,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
         type_of_environment2.value = "Earth";
         type_of_environment_Dao.insert(type_of_environment2);
         LiveData<List<Type_of_environment>> type_of_environments = type_of_environment_Dao.getAll();*/
-        RecyclerView recyclerView = findViewById(R.id.recyclerview);
-
-
 
 
         ArrayAdapter<String> adapter_phase_count = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, new String[]{"1", "2", "3"});
@@ -169,6 +201,19 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         //current =power/(phase*voltage*1000);
 
+    }
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == NEW_ACTIVITY_REQUEST_CODE && resultCode == RESULT_OK) {
+            Type_of_environment type_of_environment = new Type_of_environment(data.getStringExtra(NewWordActivity.EXTRA_REPLY));
+            mType_of_environment_ViewModel.insert(type_of_environment);
+        } else {
+            Toast.makeText(
+                    getApplicationContext(),
+                    R.string.empty_not_saved,
+                    Toast.LENGTH_LONG).show();
+        }
     }
 }
 /*

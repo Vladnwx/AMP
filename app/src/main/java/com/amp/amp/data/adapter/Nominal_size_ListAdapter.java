@@ -21,7 +21,7 @@ public class Nominal_size_ListAdapter extends ListAdapter<Nominal_size, Nominal_
     @Override
     public void onBindViewHolder(Nominal_size_ViewHolder holder, int position) {
         Nominal_size current = getItem(position);
-        holder.bind(current.getValue());
+        holder.bind(current.getValueString());
     }
 
     static class Nominal_sizeDiff extends DiffUtil.ItemCallback<Nominal_size> {
@@ -33,7 +33,7 @@ public class Nominal_size_ListAdapter extends ListAdapter<Nominal_size, Nominal_
 
         @Override
         public boolean areContentsTheSame(@NonNull Nominal_size oldItem, @NonNull Nominal_size newItem) {
-            return oldItem.getValue().equals(newItem.getValue());
+            return oldItem.getValueString().equals(newItem.getValue());
         }
     }
 }

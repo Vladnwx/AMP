@@ -25,7 +25,7 @@ public class Type_of_environment_ListAdapter extends ListAdapter<Type_of_environ
         holder.bind(current.getValue());
     }
 
-    static class Type_of_environmentDiff extends DiffUtil.ItemCallback<Type_of_environment> {
+    public static class Type_of_environmentDiff extends DiffUtil.ItemCallback<Type_of_environment> {
 
         @Override
         public boolean areItemsTheSame(@NonNull Type_of_environment oldItem, @NonNull Type_of_environment newItem) {

@@ -61,4 +61,9 @@ public class Amperage_short {
     public void setAmperage_short(int amperage_short) {
         this.amperage_short = amperage_short;
     }
+
+    @NonNull
+    public String getValue() {
+        return String.valueOf(amperage_short);
+    }
 }

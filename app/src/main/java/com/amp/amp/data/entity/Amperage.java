@@ -91,4 +91,9 @@ public class Amperage {
     public void setAmperage(int amperage) {
         this.amperage = amperage;
     }
+
+    @NonNull
+    public String getValue() {
+        return String.valueOf(amperage);
+    }
 }

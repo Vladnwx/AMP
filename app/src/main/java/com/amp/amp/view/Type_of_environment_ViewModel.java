@@ -22,7 +22,7 @@ public class Type_of_environment_ViewModel extends AndroidViewModel {
             mAllType_of_environment = mRepository.getAllType_of_environments();
         }
 
-        LiveData<List<Type_of_environment>> getAll() { return mAllType_of_environment; }
+        public LiveData<List<Type_of_environment>> getAll() { return mAllType_of_environment; }
 
         public void insert(Type_of_environment type_of_environment) { mRepository.insert(type_of_environment); }
     }
