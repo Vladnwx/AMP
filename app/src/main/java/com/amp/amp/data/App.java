@@ -44,10 +44,10 @@ public class App extends Application {
                 .build();
 
         type_of_environment_Dao = database.type_of_environment_Dao();
-       /* Type_of_environment type_of_environment = new Type_of_environment("Air");
+        Type_of_environment type_of_environment = new Type_of_environment("Air");
         type_of_environment_Dao.insert(type_of_environment);
         type_of_environment = new Type_of_environment("Earth");
-        type_of_environment_Dao.insert(type_of_environment);*/
+        type_of_environment_Dao.insert(type_of_environment);
             }
 
     public Type_of_environment_Dao getType_of_environment_Dao() {
@@ -69,7 +69,7 @@ public class App extends Application {
                 dao.insert(type_of_environment);
                 type_of_environment = new Type_of_environment("Earth");
                 dao.insert(type_of_environment);
-
+                dao.notifyAll();
             });
         }
     };
