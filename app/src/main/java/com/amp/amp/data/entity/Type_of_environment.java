@@ -69,4 +69,9 @@ public class Type_of_environment implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(mType_of_environment);
     }
+
+    @Override
+    public String toString() {
+        return mType_of_environment;
+    }
 }

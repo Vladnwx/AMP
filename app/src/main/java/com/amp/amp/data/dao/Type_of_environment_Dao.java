@@ -15,7 +15,7 @@ import java.util.List;
 @Dao
 public interface Type_of_environment_Dao {
     @Query("SELECT * FROM type_of_environment")
-    List<Type_of_environment> getAll();
+    List<String> getAll();
 
     @Query("SELECT * FROM type_of_environment")
     LiveData<List<Type_of_environment>> getAllLiveData();
@@ -34,5 +34,4 @@ public interface Type_of_environment_Dao {
 
     @Delete
     void delete(Type_of_environment type_of_environment);
-
 }

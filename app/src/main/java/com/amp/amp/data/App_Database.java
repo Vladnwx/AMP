@@ -13,6 +13,8 @@ import com.amp.amp.data.entity.Type_of_environment;
 
 public abstract class App_Database extends RoomDatabase {
     public abstract Type_of_environment_Dao type_of_environment_Dao();
+
+
 /*
     private static volatile App_Database INSTANCE;
     private static final int NUMBER_OF_THREADS = 4;
