@@ -3,16 +3,48 @@ package com.amp.amp.data;
 import androidx.room.Database;
 import androidx.room.RoomDatabase;
 
+import com.amp.amp.data.dao.Amperage_Dao;
+import com.amp.amp.data.dao.Amperage_short_Dao;
+import com.amp.amp.data.dao.Insulation_type_Dao;
+import com.amp.amp.data.dao.Material_type_Dao;
+import com.amp.amp.data.dao.Nominal_size_Dao;
+import com.amp.amp.data.dao.Number_of_cores_Dao;
+import com.amp.amp.data.dao.Short_current_Dao;
+import com.amp.amp.data.dao.Type_amperage_Dao;
 import com.amp.amp.data.dao.Type_of_environment_Dao;
+import com.amp.amp.data.entity.Amperage;
+import com.amp.amp.data.entity.Amperage_short;
+import com.amp.amp.data.entity.Insulation_type;
+import com.amp.amp.data.entity.Material_type;
+import com.amp.amp.data.entity.Nominal_size;
+import com.amp.amp.data.entity.Number_of_core;
+import com.amp.amp.data.entity.Short_current;
+import com.amp.amp.data.entity.Type_amperage;
 import com.amp.amp.data.entity.Type_of_environment;
 
 @Database(entities = {
-        Type_of_environment.class},
+        Type_of_environment.class,
+        Type_amperage.class,
+        Short_current.class,
+        Number_of_core.class,
+        Nominal_size.class,
+        Material_type.class,
+        Insulation_type.class,
+        Amperage_short.class,
+        Amperage.class},
         version = 1,
         exportSchema = false)
 
 public abstract class App_Database extends RoomDatabase {
     public abstract Type_of_environment_Dao type_of_environment_Dao();
+    public abstract Type_amperage_Dao type_amperage_Dao();
+    public abstract Short_current_Dao short_current_Dao();
+    public abstract Number_of_cores_Dao number_of_cores_Dao();
+    public abstract Nominal_size_Dao nominal_size_Dao();
+    public abstract Material_type_Dao material_type_Dao();
+    public abstract Insulation_type_Dao insulation_type_Dao();
+    public abstract Amperage_short_Dao amperage_short_Dao();
+    public  abstract Amperage_Dao amperage_Dao();
 
 
 /*

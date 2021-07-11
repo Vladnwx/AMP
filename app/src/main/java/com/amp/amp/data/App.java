@@ -7,7 +7,9 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
+import com.amp.amp.data.dao.Type_amperage_Dao;
 import com.amp.amp.data.dao.Type_of_environment_Dao;
+import com.amp.amp.data.entity.Type_amperage;
 import com.amp.amp.data.entity.Type_of_environment;
 
 import java.util.concurrent.ExecutorService;
@@ -17,6 +19,7 @@ public class App extends Application {
 
     private App_Database database;
     private Type_of_environment_Dao type_of_environment_Dao;
+    private Type_amperage_Dao type_amperage_Dao;
 
     private static App instanse;
 
@@ -39,15 +42,22 @@ public class App extends Application {
         database = Room.databaseBuilder(getApplicationContext(),
                 App_Database.class, "amperage")
                 .allowMainThreadQueries()
-                .addCallback(sRoomDatabaseCallback)
+               // .addCallback(sRoomDatabaseCallback)
                //.createFromAsset("amperage.db")
                 .build();
 
         type_of_environment_Dao = database.type_of_environment_Dao();
+        type_amperage_Dao = database.type_amperage_Dao();
+
         Type_of_environment type_of_environment = new Type_of_environment("Air");
         type_of_environment_Dao.insert(type_of_environment);
         type_of_environment = new Type_of_environment("Earth");
         type_of_environment_Dao.insert(type_of_environment);
+        Type_amperage type_amperage = new Type_amperage("AC");
+        type_amperage_Dao.insert(type_amperage);
+        type_amperage = new Type_amperage("DC");
+        type_amperage_Dao.insert(type_amperage);
+
             }
 
     public Type_of_environment_Dao getType_of_environment_Dao() {
