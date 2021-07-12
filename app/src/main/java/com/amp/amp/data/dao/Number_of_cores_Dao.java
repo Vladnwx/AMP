@@ -29,6 +29,20 @@ public interface Number_of_cores_Dao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     void insert(Number_of_core number_of_core);
 
+  @Query("INSERT INTO number_of_core (\n" +
+          "                                number_of_core\n" +
+          "                            )\n" +
+          "                            VALUES (\n" +
+          "                                'single'\n" +
+          "                            ),\n" +
+          "                            (\n" +
+          "                                'multicore5'\n" +
+          "                            ),\n" +
+          "                            (\n" +
+          "                                'multicore3'\n" +
+          "                            );")
+  void defaultgreate();
+
     @Update
     void update(Number_of_core number_of_core);
 

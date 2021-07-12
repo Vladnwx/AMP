@@ -29,6 +29,17 @@ public interface Insulation_type_Dao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     void insert(Insulation_type insulation_type);
 
+    @Query("INSERT INTO insulation_type (\n" +
+            "                                insulation_type\n" +
+            "                            )\n" +
+            "                            VALUES (\n" +
+            "                                'cross-linked polyethylene'\n" +
+            "                            ),\n" +
+            "                            (\n" +
+            "                                'pvc'\n" +
+            "                            );")
+    void defaultgreate();
+
     @Update
     void update(Insulation_type insulation_type);
 

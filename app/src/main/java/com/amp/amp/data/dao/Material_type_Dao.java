@@ -29,6 +29,17 @@ public interface Material_type_Dao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     void insert(Material_type material_type);
 
+  @Query("INSERT INTO material_type (\n" +
+          "                              material_type\n" +
+          "                          )\n" +
+          "                          VALUES (\n" +
+          "                              'Cu'\n" +
+          "                          ),\n" +
+          "                          (\n" +
+          "                              'Al'\n" +
+          "                          );")
+  void defaultgreate();
+
     @Update
     void update(Material_type material_type);
 

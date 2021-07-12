@@ -29,6 +29,17 @@ public interface Type_of_environment_Dao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     void insert(Type_of_environment type_of_environment);
 
+    @Query("INSERT INTO type_of_environment (\n" +
+            "                                    type_of_environment\n" +
+            "                                )\n" +
+            "                                VALUES (\n" +
+            "                                    'earth'\n" +
+            "                                ),\n" +
+            "                                (\n" +
+            "                                    'air'\n" +
+            "                                );")
+    void defaultgreate();
+
     @Update
     void update(Type_of_environment type_of_environment);
 

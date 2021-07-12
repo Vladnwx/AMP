@@ -36,4 +36,8 @@ public interface Amperage_Dao {
     @Delete
     void delete(Amperage amperage);
 
+   /* @Query("" )
+    void defaultgreate();*/
+
+
 }

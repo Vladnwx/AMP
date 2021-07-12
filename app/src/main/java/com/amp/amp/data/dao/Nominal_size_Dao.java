@@ -30,6 +30,80 @@ public interface Nominal_size_Dao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     void insert(Nominal_size nominal_size);
 
+    @Query("INSERT INTO nominal_size (\n" +
+            "                             nominal_size\n" +
+            "                         )\n" +
+            "                         VALUES (\n" +
+            "                             1000\n" +
+            "                         ),\n" +
+            "                         (\n" +
+            "                             800\n" +
+            "                         ),\n" +
+            "                         (\n" +
+            "                             630\n" +
+            "                         ),\n" +
+            "                         (\n" +
+            "                             500\n" +
+            "                         ),\n" +
+            "                         (\n" +
+            "                             400\n" +
+            "                         ),\n" +
+            "                         (\n" +
+            "                             300\n" +
+            "                         ),\n" +
+            "                         (\n" +
+            "                             240\n" +
+            "                         ),\n" +
+            "                         (\n" +
+            "                             185\n" +
+            "                         ),\n" +
+            "                         (\n" +
+            "                             150\n" +
+            "                         ),\n" +
+            "                         (\n" +
+            "                             120\n" +
+            "                         ),\n" +
+            "                         (\n" +
+            "                             95\n" +
+            "                         ),\n" +
+            "                         (\n" +
+            "                             70\n" +
+            "                         ),\n" +
+            "                         (\n" +
+            "                             50\n" +
+            "                         ),\n" +
+            "                         (\n" +
+            "                             35\n" +
+            "                         ),\n" +
+            "                         (\n" +
+            "                             25\n" +
+            "                         ),\n" +
+            "                         (\n" +
+            "                             16\n" +
+            "                         ),\n" +
+            "                         (\n" +
+            "                             10\n" +
+            "                         ),\n" +
+            "                         (\n" +
+            "                             6\n" +
+            "                         ),\n" +
+            "                         (\n" +
+            "                             4\n" +
+            "                         ),\n" +
+            "                         (\n" +
+            "                             2.5\n" +
+            "                         ),\n" +
+            "                         (\n" +
+            "                             1.5\n" +
+            "                         ),\n" +
+            "                         (\n" +
+            "                             0.75\n" +
+            "                         ),\n" +
+            "                         (\n" +
+            "                             0.5\n" +
+            "                         );\n")
+    void defaultgreate();
+
     @Update
     void update(Nominal_size nominal_size);
 

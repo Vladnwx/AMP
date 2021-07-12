@@ -78,43 +78,43 @@ public class App extends Application {
         amperage_short_dao = database.amperage_short_Dao();
         amperage_dao = database.amperage_Dao();
 
-        Type_of_environment type_of_environment = new Type_of_environment("earth");
+        /*Type_of_environment type_of_environment = new Type_of_environment("earth");
         type_of_environment_dao.insert(type_of_environment);
         type_of_environment = new Type_of_environment("air");
-        type_of_environment_dao.insert(type_of_environment);
+        type_of_environment_dao.insert(type_of_environment);*/
 
-        Type_amperage type_amperage = new Type_amperage("AC");
+       /* Type_amperage type_amperage = new Type_amperage("AC");
         type_amperage_dao.insert(type_amperage);
         type_amperage = new Type_amperage("DC");
-        type_amperage_dao.insert(type_amperage);
+        type_amperage_dao.insert(type_amperage);*/
 
-        Number_of_core number_of_core = new Number_of_core("single");
+       /* Number_of_core number_of_core = new Number_of_core("single");
         number_of_cores_dao.insert(number_of_core);
         number_of_core = new Number_of_core("multicore3");
         number_of_cores_dao.insert(number_of_core);
         number_of_core = new Number_of_core("multicore5");
-        number_of_cores_dao.insert(number_of_core);
+        number_of_cores_dao.insert(number_of_core);*/
 
 
-        Material_type material_type = new Material_type("Cu");
+        /*Material_type material_type = new Material_type("Cu");
         material_type_dao.insert(material_type);
         material_type = new Material_type("Al");
-        material_type_dao.insert(material_type);
+        material_type_dao.insert(material_type);*/
 
-        Insulation_type insulation_type = new Insulation_type("cross-linked polyethylene");
+       /* Insulation_type insulation_type = new Insulation_type("cross-linked polyethylene");
         insulation_type_dao.insert(insulation_type);
         insulation_type = new Insulation_type("pvc");
-        insulation_type_dao.insert(insulation_type);
+        insulation_type_dao.insert(insulation_type);*/
 
-        Method_of_laying methodoflaying = new Method_of_laying("single laying");
+       /* Method_of_laying methodoflaying = new Method_of_laying("single laying");
         method_of_laying_dao.insert(methodoflaying);
         methodoflaying = new Method_of_laying("bundle laying");
-        method_of_laying_dao.insert(methodoflaying);
+        method_of_laying_dao.insert(methodoflaying);*/
 
-        Nominal_size nominal_size = new Nominal_size(4D);
+        /*Nominal_size nominal_size = new Nominal_size(4D);
         nominal_size_dao.insert(nominal_size);
         nominal_size = new Nominal_size(6D);
-        nominal_size_dao.insert(nominal_size);
+        nominal_size_dao.insert(nominal_size);*/
 
             }
 

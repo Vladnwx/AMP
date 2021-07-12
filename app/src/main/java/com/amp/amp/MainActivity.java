@@ -47,15 +47,26 @@ public class MainActivity extends AppCompatActivity {
         List<String> amperages = new ArrayList<String>();
 
 
-
+        App.getInstance().getType_of_environment_dao().defaultgreate();
         type_of_environments = App.getInstance().getType_of_environment_dao().getAll();
-        type_amperages = App.getInstance().getType_amperage_dao().getAll();
-        number_of_cores = App.getInstance().getNumber_of_cores_dao().getAll();
-        material_types = App.getInstance().getMaterial_type_dao().getAll();
-        insulation_types = App.getInstance().getInsulation_type_dao().getAll();
-        method_of_layings  = App.getInstance().getMethod_of_laying_dao().getAll();
-        nominal_sizes = App.getInstance().getNominal_size_dao().getAll();
 
+        App.getInstance().getType_amperage_dao().defaultgreate();
+        type_amperages = App.getInstance().getType_amperage_dao().getAll();
+
+        App.getInstance().getNumber_of_cores_dao().defaultgreate();
+        number_of_cores = App.getInstance().getNumber_of_cores_dao().getAll();
+
+        App.getInstance().getMaterial_type_dao().defaultgreate();
+        material_types = App.getInstance().getMaterial_type_dao().getAll();
+
+        App.getInstance().getInsulation_type_dao().defaultgreate();
+        insulation_types = App.getInstance().getInsulation_type_dao().getAll();
+
+        App.getInstance().getMethod_of_laying_dao().defaultgreate();
+        method_of_layings  = App.getInstance().getMethod_of_laying_dao().getAll();
+
+        App.getInstance().getNominal_size_dao().defaultgreate();
+        nominal_sizes = App.getInstance().getNominal_size_dao().getAll();
 
 
         ArrayAdapter<String> adapter_type_of_environments = new ArrayAdapter<String>(this,

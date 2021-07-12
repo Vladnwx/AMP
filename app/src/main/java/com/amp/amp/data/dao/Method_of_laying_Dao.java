@@ -29,6 +29,17 @@ public interface Method_of_laying_Dao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     void insert(Method_of_laying methodoflaying);
 
+    @Query("INSERT INTO method_of_laying (\n" +
+            "                                 method_of_laying\n" +
+            "                             )\n" +
+            "                             VALUES (\n" +
+            "                                 'single laying'\n" +
+            "                             ),\n" +
+            "                             (\n" +
+            "                                 'bundle laying'\n" +
+            "                             );\n")
+    void defaultgreate();
+
     @Update
     void update(Method_of_laying methodoflaying);
 

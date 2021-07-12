@@ -31,7 +31,7 @@
                 android:layout_marginLeft="5sp"
                 android:layout_marginRight="5sp"
                 android:gravity="center"
-                android:text="Окружающая среда"
+                android:text="Type_of_environment"
                 android:textSize="24sp" />
 
             <Spinner
@@ -58,7 +58,7 @@
                 android:layout_marginLeft="5sp"
                 android:layout_marginRight="5sp"
                 android:gravity="center"
-                android:text="Род тока"
+                android:text="Type_amperage"
                 android:textSize="24sp" />
 
             <Spinner
@@ -84,7 +84,7 @@
                 android:layout_marginLeft="5sp"
                 android:layout_marginRight="5sp"
                 android:gravity="center"
-                android:text="Конструкция жилы"
+                android:text="Number_of_core"
                 android:textSize="24sp" />
 
             <Spinner
@@ -111,7 +111,7 @@
                 android:layout_marginLeft="5sp"
                 android:layout_marginRight="5sp"
                 android:gravity="center"
-                android:text="Материал проводника"
+                android:text="Material_type"
                 android:textSize="24sp" />
 
             <Spinner
@@ -138,7 +138,7 @@
                 android:layout_marginLeft="5sp"
                 android:layout_marginRight="5sp"
                 android:gravity="center"
-                android:text="Материал изоляции"
+                android:text="Insulation_type"
                 android:textSize="24sp" />
 
             <Spinner
@@ -166,7 +166,7 @@
                 android:layout_marginLeft="5sp"
                 android:layout_marginRight="5sp"
                 android:gravity="center"
-                android:text="Способ прокладки"
+                android:text="Method_of_laying"
                 android:textSize="24sp" />
 
             <Spinner
@@ -192,7 +192,7 @@
                 android:layout_marginLeft="5sp"
                 android:layout_marginRight="5sp"
                 android:gravity="center"
-                android:text="Эквивалетное Сечение"
+                android:text="Equivalent Section"
                 android:textSize="24sp" />
 
             <TextView
@@ -222,7 +222,7 @@
                 android:layout_marginLeft="5sp"
                 android:layout_marginRight="5sp"
                 android:gravity="center"
-                android:text="Сопротивление R, Ом/км"
+                android:text="Resistance R, Ohm / km"
                 android:textSize="24sp" />
 
             <TextView
@@ -252,7 +252,7 @@
                 android:layout_marginLeft="5sp"
                 android:layout_marginRight="5sp"
                 android:gravity="center"
-                android:text="Сопротивление X, Ом/км"
+                android:text="Resistance X, Ohm / km"
                 android:textSize="24sp" />
 
             <TextView
@@ -282,7 +282,7 @@
                 android:layout_marginLeft="5sp"
                 android:layout_marginRight="5sp"
                 android:gravity="center"
-                android:text="Допустимый ток"
+                android:text="Allowable current"
                 android:textSize="24sp" />
 
             <EditText
@@ -310,7 +310,7 @@
                 android:id="@+id/button_dopustimiy_tok"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Найти сечение по допустимому току"
+                android:text="Find the cross section for the permissible current"
                 android:textColor="#000000"
                 app:rippleColor="#673AB7" />
         </LinearLayout>
@@ -330,7 +330,7 @@
                 android:layout_marginLeft="5sp"
                 android:layout_marginRight="5sp"
                 android:gravity="center"
-                android:text="Сечение жилы"
+                android:text="Conductor cross-section"
                 android:textSize="24sp" />
 
             <EditText
@@ -358,7 +358,7 @@
                 android:id="@+id/button_minimalynoyesechenie"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Найти ток по сечению"
+                android:text="Find the current over the cross section"
                 android:textColor="#000000" />
 
         </LinearLayout>

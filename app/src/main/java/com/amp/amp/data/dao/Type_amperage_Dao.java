@@ -29,6 +29,17 @@ public interface Type_amperage_Dao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     void insert(Type_amperage type_amperage);
 
+    @Query("INSERT INTO type_amperage (\n" +
+            "                              type_amperage\n" +
+            "                          )\n" +
+            "                          VALUES (\n" +
+            "                              'AC'\n" +
+            "                          ),\n" +
+            "                          (\n" +
+            "                              'DC'\n" +
+            "                          );")
+    void defaultgreate();
+
     @Update
     void update(Type_amperage type_amperage);
 
