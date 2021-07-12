@@ -14,12 +14,15 @@ import java.util.List;
 
 @Dao
 public interface Material_type_Dao {
-    @Query("SELECT * FROM material_type")
-    LiveData<List<Material_type>> getAll();
+  @Query("SELECT * FROM material_type")
+  List<String> getAll();
 
-  /*  @Query("SELECT * FROM material_type ORDER BY material_type ASC")
+    @Query("SELECT * FROM material_type")
+    LiveData<List<Material_type>> getAllLiveData();
+
+    @Query("SELECT * FROM material_type ORDER BY material_type ASC")
     LiveData<List<Material_type>> getAlphabetizedMaterial_type();
-*/
+
     @Query("DELETE FROM material_type")
     void deleteAll();
 

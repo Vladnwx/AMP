@@ -14,12 +14,16 @@ import java.util.List;
 
 @Dao
 public interface Nominal_size_Dao {
-    @Query("SELECT * FROM nominal_size")
-    LiveData<List<Nominal_size>> getAll();
 
-  /*  @Query("SELECT * FROM nominal_size ORDER BY nominal_size ASC")
+    @Query("SELECT * FROM nominal_size")
+    List<Integer> getAll();
+
+    @Query("SELECT * FROM nominal_size")
+    LiveData<List<Nominal_size>> getAllLiveData();
+
+    @Query("SELECT * FROM nominal_size ORDER BY nominal_size ASC")
     LiveData<List<Nominal_size>> getAlphabetizedNominal_size();
-*/
+
     @Query("DELETE FROM nominal_size")
     void deleteAll();
 

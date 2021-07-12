@@ -15,8 +15,11 @@ import java.util.List;
 @Dao
 public interface Amperage_Dao {
 
+        /*@Query("SELECT * FROM amperage")
+    List<String> getAll();*/
+
     @Query("SELECT * FROM amperage")
-    LiveData<List<Amperage>> getAll();
+    LiveData<List<Amperage>> getAllLiveData();
 
     @Query("SELECT * FROM amperage ORDER BY amperage ASC")
     LiveData<List<Amperage>> getAlphabetizedAmperage();

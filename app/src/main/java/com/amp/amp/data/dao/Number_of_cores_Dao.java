@@ -14,13 +14,16 @@ import java.util.List;
 
 @Dao
 public interface Number_of_cores_Dao {
-    @Query("SELECT * FROM Number_of_core")
-    LiveData<List<Number_of_core>> getAll();
+  @Query("SELECT * FROM Number_of_core")
+  List<String> getAll();
 
-  /*  @Query("SELECT * FROM Number_of_core ORDER BY Number_of_core ASC")
+  @Query("SELECT * FROM Number_of_core")
+    LiveData<List<Number_of_core>> getAllLiveData();
+
+    @Query("SELECT * FROM Number_of_core ORDER BY Number_of_core ASC")
     LiveData<List<Number_of_core>> getAlphabetizedNumber_of_core();
-*/
-    @Query("DELETE FROM nominal_size")
+
+    @Query("DELETE FROM Number_of_core")
     void deleteAll();
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)

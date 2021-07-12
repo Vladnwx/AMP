@@ -14,15 +14,17 @@ import java.util.List;
 
 @Dao
 public interface Short_current_Dao {
-    @Query("SELECT * FROM short_current")
-    LiveData<List<Short_current>> getAll();
+  @Query("SELECT * FROM short_current")
+  List<String> getAll();
 
-  /*  @Query("SELECT * FROM short_current ORDER BY short_current ASC")
+  @Query("SELECT * FROM short_current")
+    LiveData<List<Short_current>> getAllLiveData();
+
+   @Query("SELECT * FROM short_current ORDER BY short_current ASC")
     LiveData<List<Short_current>> getAlphabetizedShort_current();
-*/
+
     @Query("DELETE FROM short_current")
     void deleteAll();
-
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     void insert(Short_current short_current);

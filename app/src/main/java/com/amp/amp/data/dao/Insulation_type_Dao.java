@@ -15,11 +15,14 @@ import java.util.List;
 @Dao
 public interface Insulation_type_Dao {
     @Query("SELECT * FROM insulation_type")
-    LiveData<List<Insulation_type>> getAll();
+    List<String> getAll();
 
- /*   @Query("SELECT * FROM insulation_type ORDER BY insulation_type ASC")
+    @Query("SELECT * FROM insulation_type")
+    LiveData<List<Insulation_type>> getAllLiveData();
+
+    @Query("SELECT * FROM insulation_type ORDER BY insulation_type ASC")
     LiveData<List<Insulation_type>> getAlphabetizedInsulation_type();
-*/
+
     @Query("DELETE FROM insulation_type")
     void deleteAll();
 
