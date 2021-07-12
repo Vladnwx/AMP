@@ -16,7 +16,7 @@ import java.util.List;
 public interface Nominal_size_Dao {
 
     @Query("SELECT * FROM nominal_size")
-    List<Integer> getAll();
+    List<Double> getAll();
 
     @Query("SELECT * FROM nominal_size")
     LiveData<List<Nominal_size>> getAllLiveData();

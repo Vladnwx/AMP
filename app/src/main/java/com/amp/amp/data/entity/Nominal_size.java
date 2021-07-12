@@ -14,14 +14,14 @@ public class Nominal_size implements Parcelable {
     @PrimaryKey
     @NonNull
     @ColumnInfo(name = "Nominal_size")
-    private int mNominal_size;
+    private Double mNominal_size;
 
-    public Nominal_size(int mNominal_size) {
+    public Nominal_size(Double mNominal_size) {
         this.mNominal_size = mNominal_size;
     }
 
     protected Nominal_size(Parcel in) {
-        mNominal_size = in.readInt();
+        mNominal_size = in.readDouble();
     }
 
     public static final Creator<Nominal_size> CREATOR = new Creator<Nominal_size>() {
@@ -36,11 +36,11 @@ public class Nominal_size implements Parcelable {
         }
     };
 
-    public int getNominal_size() {
+    public double getNominal_size() {
         return mNominal_size;
     }
 
-    public void setNominal_size(int mNominal_size) {
+    public void setNominal_size(double mNominal_size) {
         this.mNominal_size = mNominal_size;
     }
 
@@ -51,6 +51,6 @@ public class Nominal_size implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeInt(mNominal_size);
+        dest.writeDouble(mNominal_size);
     }
 }

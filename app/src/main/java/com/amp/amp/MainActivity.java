@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         List<String> material_types = new ArrayList<String>();
         List<String> insulation_types = new ArrayList<String>();
         List<String> method_of_layings = new ArrayList<String>();
-        List<Integer> nominal_sizes = new ArrayList<>();
+        List<Double> nominal_sizes = new ArrayList<>();
         List<String> amperage_shorts = new ArrayList<String>();
         List<String> amperages = new ArrayList<String>();
 
