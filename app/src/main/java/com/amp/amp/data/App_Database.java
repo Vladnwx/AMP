@@ -44,7 +44,8 @@ public abstract class App_Database extends RoomDatabase {
     public abstract Material_type_Dao material_type_Dao();
     public abstract Insulation_type_Dao insulation_type_Dao();
     public abstract Amperage_short_Dao amperage_short_Dao();
-    public  abstract Amperage_Dao amperage_Dao();
+    public abstract Amperage_Dao amperage_Dao();
+
 
 
 /*
