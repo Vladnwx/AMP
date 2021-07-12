@@ -39,7 +39,6 @@ public class Amperage_short implements Parcelable {
         this.amperage_short = amperage_short;
     }
 
-
     protected Amperage_short(Parcel in) {
         id = in.readInt();
         nominal_size = in.readInt();

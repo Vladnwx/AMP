@@ -9,38 +9,469 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:id="@+id/linearLayout_phase"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20sp"
-        android:gravity="center"
-        android:textAlignment="center"
-        tools:ignore="ExtraText,MissingConstraints">>
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
-            android:id="@+id/textview"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginStart="10sp"
-            android:layout_marginEnd="5sp"
+        <LinearLayout
+            android:id="@+id/linearLayout_type_of_environment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal|center_vertical"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="5sp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/TextView_type_of_environment"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:gravity="center"
+                android:text="Окружающая среда"
+                android:textSize="24sp" />
+
+            <Spinner
+                android:id="@+id/spinner_type_of_environment"
+                android:layout_width="100sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:spinnerMode="dialog" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="5sp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/TextView_type_amperage"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:gravity="center"
+                android:text="Род тока"
+                android:textSize="24sp" />
+
+            <Spinner
+                android:id="@+id/spinner_type_amperage"
+                android:layout_width="100sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_number_of_cores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center"
-            android:textAlignment="center"
-            android:textSize="24sp"
-            android:text="Окружающая среда"
-            android:background="@android:color/holo_orange_light"
-            />
+            tools:ignore="ExtraText,MissingConstraints">
 
-        <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="150sp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="5sp"
-            android:layout_marginRight="5sp"
-            android:gravity="center"
-            android:textAlignment="center"
-            android:textSize="24sp"
+            <TextView
+                android:id="@+id/TextView_number_of_cores"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:gravity="center"
+                android:text="Конструкция жилы"
+                android:textSize="24sp" />
 
-            />
+            <Spinner
+                android:id="@+id/spinner_number_of_cores"
+                android:layout_width="100sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_material_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="5sp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/TextView_material_type"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:gravity="center"
+                android:text="Материал проводника"
+                android:textSize="24sp" />
+
+            <Spinner
+                android:id="@+id/spinner_material_type"
+                android:layout_width="100sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_insulation_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="5sp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/TextView_insulation_type"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:gravity="center"
+                android:text="Материал изоляции"
+                android:textSize="24sp" />
+
+            <Spinner
+                android:id="@+id/spinner_insulation_type"
+                android:layout_width="100sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout_method_of_laying"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="5sp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/TextView_method_of_laying"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:gravity="center"
+                android:text="Способ прокладки"
+                android:textSize="24sp" />
+
+            <Spinner
+                android:id="@+id/spinner_method_of_laying"
+                android:layout_width="100sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_currentget1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="5sp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:gravity="center"
+                android:text="Эквивалетное Сечение"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:gravity="center"
+                android:hint="0"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="5sp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:gravity="center"
+                android:text="Сопротивление R, Ом/км"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:gravity="center"
+                android:hint="0"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="5sp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:gravity="center"
+                android:text="Сопротивление X, Ом/км"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:gravity="center"
+                android:hint="0"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_currentget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="5sp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:gravity="center"
+                android:text="Допустимый ток"
+                android:textSize="24sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:gravity="center"
+                android:hint="0"
+                android:inputType="numberDecimal"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="5sp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button_dopustimiy_tok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Найти сечение по допустимому току"
+                android:textColor="#000000"
+                app:rippleColor="#673AB7" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_cable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="5sp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:gravity="center"
+                android:text="Сечение жилы"
+                android:textSize="24sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:gravity="center"
+                android:hint="0"
+                android:inputType="numberDecimal"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="5sp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button_minimalynoyesechenie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Найти ток по сечению"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_phase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="5sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:gravity="center"
+                android:text="Мощность" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:gravity="center"
+
+                android:hint="0"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:gravity="center"
+
+                android:text=", кВт" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:gravity="center"
+
+                android:text="Напряжение" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:gravity="center"
+
+                android:hint="0"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:gravity="center"
+
+                android:text=", В" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:gravity="center"
+
+                android:text="Число фаз" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:gravity="center"
+
+                android:hint="0" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="5sp"
+            android:gravity="center">
+
+
+            <Button
+                android:id="@+id/button_naytipomochnosti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Я в этом не разбираюсь, я знаю только мощность и количество фаз"
+                android:textColor="#000000" />
+        </LinearLayout>
+
     </LinearLayout>
 
 

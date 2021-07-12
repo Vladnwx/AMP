@@ -9,7 +9,7 @@ import androidx.room.Entity;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
-@Entity (indices = {@Index(value = {"Nominal_size"},unique = true)})
+@Entity(indices = {@Index(value = {"Nominal_size"},unique = true)})
 public class Nominal_size implements Parcelable {
     @PrimaryKey
     @NonNull
