@@ -11,17 +11,12 @@ import com.amp.amp.data.dao.Amperage_Dao;
 import com.amp.amp.data.dao.Amperage_short_Dao;
 import com.amp.amp.data.dao.Insulation_type_Dao;
 import com.amp.amp.data.dao.Material_type_Dao;
+import com.amp.amp.data.dao.Method_of_laying_Dao;
 import com.amp.amp.data.dao.Nominal_size_Dao;
 import com.amp.amp.data.dao.Number_of_cores_Dao;
-import com.amp.amp.data.dao.Method_of_laying_Dao;
+import com.amp.amp.data.dao.Resistivity_Dao;
 import com.amp.amp.data.dao.Type_amperage_Dao;
 import com.amp.amp.data.dao.Type_of_environment_Dao;
-import com.amp.amp.data.entity.Insulation_type;
-import com.amp.amp.data.entity.Material_type;
-import com.amp.amp.data.entity.Nominal_size;
-import com.amp.amp.data.entity.Number_of_core;
-import com.amp.amp.data.entity.Method_of_laying;
-import com.amp.amp.data.entity.Type_amperage;
 import com.amp.amp.data.entity.Type_of_environment;
 
 import java.util.concurrent.ExecutorService;
@@ -41,7 +36,7 @@ public class App extends Application {
     private Insulation_type_Dao insulation_type_dao;
     private Amperage_short_Dao amperage_short_dao;
     private Amperage_Dao amperage_dao;
-
+    private Resistivity_Dao resistivity_dao;
 
     private static App instanse;
 
@@ -51,9 +46,7 @@ public class App extends Application {
             Executors.newFixedThreadPool(NUMBER_OF_THREADS);
 
 
-    public static App getInstance() {
-        return instanse;
-    }
+
 
     @Override
     public void onCreate() {
@@ -77,44 +70,7 @@ public class App extends Application {
         insulation_type_dao = database.insulation_type_Dao();
         amperage_short_dao = database.amperage_short_Dao();
         amperage_dao = database.amperage_Dao();
-
-        /*Type_of_environment type_of_environment = new Type_of_environment("earth");
-        type_of_environment_dao.insert(type_of_environment);
-        type_of_environment = new Type_of_environment("air");
-        type_of_environment_dao.insert(type_of_environment);*/
-
-       /* Type_amperage type_amperage = new Type_amperage("AC");
-        type_amperage_dao.insert(type_amperage);
-        type_amperage = new Type_amperage("DC");
-        type_amperage_dao.insert(type_amperage);*/
-
-       /* Number_of_core number_of_core = new Number_of_core("single");
-        number_of_cores_dao.insert(number_of_core);
-        number_of_core = new Number_of_core("multicore3");
-        number_of_cores_dao.insert(number_of_core);
-        number_of_core = new Number_of_core("multicore5");
-        number_of_cores_dao.insert(number_of_core);*/
-
-
-        /*Material_type material_type = new Material_type("Cu");
-        material_type_dao.insert(material_type);
-        material_type = new Material_type("Al");
-        material_type_dao.insert(material_type);*/
-
-       /* Insulation_type insulation_type = new Insulation_type("cross-linked polyethylene");
-        insulation_type_dao.insert(insulation_type);
-        insulation_type = new Insulation_type("pvc");
-        insulation_type_dao.insert(insulation_type);*/
-
-       /* Method_of_laying methodoflaying = new Method_of_laying("single laying");
-        method_of_laying_dao.insert(methodoflaying);
-        methodoflaying = new Method_of_laying("bundle laying");
-        method_of_laying_dao.insert(methodoflaying);*/
-
-        /*Nominal_size nominal_size = new Nominal_size(4D);
-        nominal_size_dao.insert(nominal_size);
-        nominal_size = new Nominal_size(6D);
-        nominal_size_dao.insert(nominal_size);*/
+        resistivity_dao = database.resistivity_dao();
 
             }
 
@@ -191,7 +147,17 @@ public class App extends Application {
         this.amperage_dao = amperage_dao;
     }
 
+    public static App getInstance() {
+        return instanse;
+    }
 
+    public Resistivity_Dao getResistivity_dao() {
+        return resistivity_dao;
+    }
+
+    public void setResistivity_dao(Resistivity_Dao resistivity_dao) {
+        this.resistivity_dao = resistivity_dao;
+    }
 
     private static RoomDatabase.Callback sRoomDatabaseCallback = new RoomDatabase.Callback() {
         @Override

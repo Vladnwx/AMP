@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
         App.getInstance().getNominal_size_dao().defaultgreate();
         nominal_sizes = App.getInstance().getNominal_size_dao().getAll();
 
+        App.getInstance().getAmperage_short_dao().defaultgreate();
 
         ArrayAdapter<String> adapter_type_of_environments = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, type_of_environments);

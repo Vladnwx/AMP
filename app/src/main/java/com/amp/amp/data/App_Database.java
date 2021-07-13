@@ -10,6 +10,7 @@ import com.amp.amp.data.dao.Material_type_Dao;
 import com.amp.amp.data.dao.Method_of_laying_Dao;
 import com.amp.amp.data.dao.Nominal_size_Dao;
 import com.amp.amp.data.dao.Number_of_cores_Dao;
+import com.amp.amp.data.dao.Resistivity_Dao;
 import com.amp.amp.data.dao.Type_amperage_Dao;
 import com.amp.amp.data.dao.Type_of_environment_Dao;
 import com.amp.amp.data.entity.Amperage;
@@ -19,6 +20,7 @@ import com.amp.amp.data.entity.Material_type;
 import com.amp.amp.data.entity.Method_of_laying;
 import com.amp.amp.data.entity.Nominal_size;
 import com.amp.amp.data.entity.Number_of_core;
+import com.amp.amp.data.entity.Resistivity;
 import com.amp.amp.data.entity.Type_amperage;
 import com.amp.amp.data.entity.Type_of_environment;
 
@@ -31,7 +33,8 @@ import com.amp.amp.data.entity.Type_of_environment;
         Material_type.class,
         Insulation_type.class,
         Amperage_short.class,
-        Amperage.class},
+        Amperage.class,
+        Resistivity.class},
         version = 1,
         exportSchema = false)
 
@@ -45,6 +48,7 @@ public abstract class App_Database extends RoomDatabase {
     public abstract Insulation_type_Dao insulation_type_Dao();
     public abstract Amperage_short_Dao amperage_short_Dao();
     public abstract Amperage_Dao amperage_Dao();
+    public abstract Resistivity_Dao resistivity_dao();
 
 
 
