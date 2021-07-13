@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AMP</string>
+    <string name="type_of_environment">Окружающая среда</string>
+    <string name="type_amperage">Вид тока</string>
+    <string name="number_of_core">Число жил</string>
+    <string name="material_type">Материал проводника</string>
+    <string name="insulation_type">Тип изоляции</string>
+    <string name="method_of_laying">Способ прокладки</string>
+    <string name="equivalent_section">Эквивалентное сечение</string>
+    <string name="resistance_r_ohm_km">Сопротивление R, Ом / км</string>
+    <string name="resistance_x_ohm_km">Сопротивление X, Ом / км</string>
+    <string name="conductor_cross_section">Сечение жилы</string>
+    <string name="find_the_current_over_the_cross_section">Найти ток по сечению жилы</string>
+    <string name="allowable_current">Допустимый ток</string>
+    <string name="power">Мощность</string>
+    <string name="find_the_cross_section_for_the_permissible_current">Найти сечение по допустимому току</string>
+    <string name="kw">, кВт</string>
+    <string name="voltage">Напряжение</string>
+    <string name="power_get">Я в этом не разбираюсь, я знаю только мощность и количество фаз</string>
+
+</resources>

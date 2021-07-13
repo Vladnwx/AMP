@@ -31,7 +31,7 @@
                 android:layout_marginLeft="5sp"
                 android:layout_marginRight="5sp"
                 android:gravity="center"
-                android:text="Type_of_environment"
+                android:text="@string/type_of_environment"
                 android:textSize="24sp" />
 
             <Spinner
@@ -58,7 +58,7 @@
                 android:layout_marginLeft="5sp"
                 android:layout_marginRight="5sp"
                 android:gravity="center"
-                android:text="Type_amperage"
+                android:text="@string/type_amperage"
                 android:textSize="24sp" />
 
             <Spinner
@@ -84,12 +84,12 @@
                 android:layout_marginLeft="5sp"
                 android:layout_marginRight="5sp"
                 android:gravity="center"
-                android:text="Number_of_core"
+                android:text="@string/number_of_core"
                 android:textSize="24sp" />
 
             <Spinner
                 android:id="@+id/spinner_number_of_cores"
-                android:layout_width="100sp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:gravity="center" />
@@ -111,7 +111,7 @@
                 android:layout_marginLeft="5sp"
                 android:layout_marginRight="5sp"
                 android:gravity="center"
-                android:text="Material_type"
+                android:text="@string/material_type"
                 android:textSize="24sp" />
 
             <Spinner
@@ -138,7 +138,7 @@
                 android:layout_marginLeft="5sp"
                 android:layout_marginRight="5sp"
                 android:gravity="center"
-                android:text="Insulation_type"
+                android:text="@string/insulation_type"
                 android:textSize="24sp" />
 
             <Spinner
@@ -166,7 +166,7 @@
                 android:layout_marginLeft="5sp"
                 android:layout_marginRight="5sp"
                 android:gravity="center"
-                android:text="Method_of_laying"
+                android:text="@string/method_of_laying"
                 android:textSize="24sp" />
 
             <Spinner
@@ -192,7 +192,7 @@
                 android:layout_marginLeft="5sp"
                 android:layout_marginRight="5sp"
                 android:gravity="center"
-                android:text="Equivalent Section"
+                android:text="@string/equivalent_section"
                 android:textSize="24sp" />
 
             <TextView
@@ -222,7 +222,7 @@
                 android:layout_marginLeft="5sp"
                 android:layout_marginRight="5sp"
                 android:gravity="center"
-                android:text="Resistance R, Ohm / km"
+                android:text="@string/resistance_r_ohm_km"
                 android:textSize="24sp" />
 
             <TextView
@@ -252,7 +252,7 @@
                 android:layout_marginLeft="5sp"
                 android:layout_marginRight="5sp"
                 android:gravity="center"
-                android:text="Resistance X, Ohm / km"
+                android:text="@string/resistance_x_ohm_km"
                 android:textSize="24sp" />
 
             <TextView
@@ -283,7 +283,7 @@
                 android:layout_marginLeft="5sp"
                 android:layout_marginRight="5sp"
                 android:gravity="center"
-                android:text="Conductor cross-section"
+                android:text="@string/conductor_cross_section"
                 android:textSize="24sp" />
 
             <Spinner
@@ -308,7 +308,7 @@
                 android:id="@+id/button_minimalynoyesechenie"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Find the current over the cross section"
+                android:text="@string/find_the_current_over_the_cross_section"
                 android:textColor="#000000" />
 
         </LinearLayout>
@@ -328,7 +328,7 @@
                 android:layout_marginLeft="5sp"
                 android:layout_marginRight="5sp"
                 android:gravity="center"
-                android:text="Allowable current"
+                android:text="@string/allowable_current"
                 android:textSize="24sp" />
 
             <EditText
@@ -338,7 +338,7 @@
                 android:layout_marginLeft="5sp"
                 android:layout_marginRight="5sp"
                 android:gravity="center"
-                android:hint="0"
+                android:autofillHints="0"
                 android:inputType="numberDecimal"
                 android:textSize="24sp" />
 
@@ -356,7 +356,7 @@
                 android:id="@+id/button_dopustimiy_tok"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Find the cross section for the permissible current"
+                android:text="@string/find_the_cross_section_for_the_permissible_current"
                 android:textColor="#000000"
                 app:rippleColor="#673AB7" />
         </LinearLayout>
@@ -375,7 +375,7 @@
                 android:layout_marginLeft="5sp"
                 android:layout_marginRight="5sp"
                 android:gravity="center"
-                android:text="Мощность" />
+                android:text="@string/power" />
 
             <EditText
                 android:layout_width="wrap_content"
@@ -384,8 +384,7 @@
                 android:layout_marginLeft="5sp"
                 android:layout_marginRight="5sp"
                 android:gravity="center"
-
-                android:hint="0"
+                android:autofillHints="0"
                 android:inputType="numberDecimal" />
 
             <TextView
@@ -396,7 +395,7 @@
                 android:layout_marginRight="5sp"
                 android:gravity="center"
 
-                android:text=", кВт" />
+                android:text="@string/kw" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -406,7 +405,7 @@
                 android:layout_marginRight="5sp"
                 android:gravity="center"
 
-                android:text="Напряжение" />
+                android:text="@string/voltage" />
 
             <EditText
                 android:layout_width="wrap_content"
@@ -466,7 +465,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Я в этом не разбираюсь, я знаю только мощность и количество фаз"
+                android:text="@string/power_get"
                 android:textColor="#000000" />
         </LinearLayout>
 

@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">AMP</string>
+    <string name="type_of_environment">Type_of_environment</string>
+    <string name="type_amperage">Type_amperage</string>
+    <string name="number_of_core">Number_of_core</string>
+    <string name="material_type">Material_type</string>
+    <string name="insulation_type">Insulation_type</string>
+    <string name="method_of_laying">Method_of_laying</string>
+    <string name="equivalent_section">Equivalent Section</string>
+    <string name="resistance_r_ohm_km">Resistance R, Ohm / km</string>
+    <string name="resistance_x_ohm_km">Resistance X, Ohm / km</string>
+    <string name="conductor_cross_section">Conductor cross-section</string>
+    <string name="find_the_current_over_the_cross_section">Find the current over the cross section</string>
+    <string name="allowable_current">Allowable current</string>
+    <string name="power">Power</string>
+    <string name="find_the_cross_section_for_the_permissible_current">Find the cross section for the permissible current</string>
+    <string name="kw">, kW</string>
+    <string name="voltage">Voltage</string>
+    <string name="power_get">Я в этом не разбираюсь, я знаю только мощность и количество фаз</string>
 </resources>

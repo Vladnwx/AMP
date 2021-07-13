@@ -33,14 +33,27 @@ public class Resistivity implements Parcelable {
     @NonNull
     @ColumnInfo(name = "X")
     private double X;
+    @NonNull
+    @ColumnInfo(name = "p")
+    private double p;
 
-    public Resistivity(int id, @NonNull String material_type, double nominal_size, double r, double x) {
+    public Resistivity(int id, @NonNull String material_type, double nominal_size, double r, double x, double p) {
         this.id = id;
         this.material_type = material_type;
         this.nominal_size = nominal_size;
         R = r;
         X = x;
+        this.p = p;
     }
+
+    public double getP() {
+        return p;
+    }
+
+    public void setP(double p) {
+        this.p = p;
+    }
+
     public Resistivity() {
     }
 
