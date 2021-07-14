@@ -71,6 +71,8 @@ public class MainActivity extends AppCompatActivity {
 
         App.getInstance().getAmperage_short_dao().defaultgreate();
 
+        App.getInstance().getResistivity_dao().defaultgreate();
+
         ArrayAdapter<String> adapter_type_of_environments = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, type_of_environments);
         ArrayAdapter<String> adapter_type_amperages = new ArrayAdapter<String>(this,

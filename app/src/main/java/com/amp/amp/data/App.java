@@ -164,7 +164,8 @@ public class App extends Application {
                 Type_of_environment_Dao type_of_environment_dao = INSTANCE.type_of_environment_Dao();
                 type_of_environment_dao.deleteAll();
                 type_of_environment_dao.defaultgreate();
-                type_of_environment_dao.notifyAll();
+
+                //type_of_environment_dao.notifyAll();
 
 
 
