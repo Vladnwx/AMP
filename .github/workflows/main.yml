@@ -26,10 +26,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       
-      - name: Setup JDK
-        uses: actions/setup-java@v2
-       # with:
-            #  java-version: 11
+      - uses: actions/setup-java@v2
+        with:
+              distribution: 'adopt' # See 'Supported distributions' for available options
+              java-version: '11'
+#- run: java -cp java HelloWorldApp
         
       - name: Build with Gradle
         run:  ./gradlew build
