@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
         TextView textView_insulation_type = findViewById(R.id.TextView_insulation_type);
         TextView textView_method_of_laying = findViewById(R.id.TextView_method_of_laying);
         TextView textView_nominal_size = findViewById(R.id.TextView_nominal_size);
+        TextView textView_resistivity_R = findViewById(R.id.TextView_Resistivity_R);
+        TextView textView_resistivity_X = findViewById(R.id.TextView_Resistivity_X);
 
         Spinner spinner_type_of_environment = (Spinner) findViewById(R.id.spinner_type_of_environment);
         Spinner spinner_type_amperage = (Spinner) findViewById(R.id.spinner_type_amperage);
@@ -107,6 +109,14 @@ public class MainActivity extends AppCompatActivity {
 
         spinner_type_of_environment.setSelection(0);
 
+
+
+       textView_resistivity_R.setText(String.valueOf(App.getInstance().getResistivity_dao().getR(spinner_material_type.getSelectedItem().toString(), Double.parseDouble(spinner_nominal_size.getSelectedItem().toString()))));
+
+        textView_resistivity_X.setText(String.valueOf(App.getInstance().getResistivity_dao().getX(spinner_material_type.getSelectedItem().toString(), Double.parseDouble(spinner_nominal_size.getSelectedItem().toString()))));
+
     }
+
+
 
 }
