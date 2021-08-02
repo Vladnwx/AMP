@@ -33,10 +33,10 @@ public interface Method_of_laying_Dao {
             "                                 method_of_laying\n" +
             "                             )\n" +
             "                             VALUES (\n" +
-            "                                 'single laying'\n" +
+            "                                 'single'\n" +
             "                             ),\n" +
             "                             (\n" +
-            "                                 'bundle laying'\n" +
+            "                                 'bundle'\n" +
             "                             );\n")
     void defaultgreate();
 
