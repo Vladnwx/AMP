@@ -15,8 +15,8 @@ import java.util.List;
 @Dao
 public interface Resistivity_Dao {
 
-    /*@Query("SELECT * FROM resistivity")
-    List<String> getAll();*/
+    // @Query("SELECT * FROM resistivity")
+    // List<String> getAll();
 
     @Query("SELECT R  FROM resistivity WHERE material_type = :tmaterial_type AND nominal_size = :tnominal_size")
     double getR(String tmaterial_type, double tnominal_size);

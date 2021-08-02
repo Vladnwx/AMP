@@ -7,22 +7,16 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.lifecycle.LiveData;
 
-import com.amp.amp.data.App;
-import com.amp.amp.data.entity.Type_of_environment;
 import com.amp.amp.databinding.ActivityScrollingBinding;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
-import java.util.List;
-
 public class ScrollingActivity extends AppCompatActivity {
 
     private ActivityScrollingBinding binding;
 
-    private LiveData<List<Type_of_environment>> type_of_environments = App.getInstance().getAllLiveData_Type_of_environment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

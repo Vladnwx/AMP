@@ -4,7 +4,25 @@ import android.app.Application;
 
 import androidx.lifecycle.LiveData;
 
+import com.amp.amp.data.dao.Amperage_Dao;
+import com.amp.amp.data.dao.Amperage_short_Dao;
+import com.amp.amp.data.dao.Insulation_type_Dao;
+import com.amp.amp.data.dao.Material_type_Dao;
+import com.amp.amp.data.dao.Method_of_laying_Dao;
+import com.amp.amp.data.dao.Nominal_size_Dao;
+import com.amp.amp.data.dao.Number_of_core_Dao;
+import com.amp.amp.data.dao.Resistivity_Dao;
+import com.amp.amp.data.dao.Type_amperage_Dao;
 import com.amp.amp.data.dao.Type_of_environment_Dao;
+import com.amp.amp.data.entity.Amperage;
+import com.amp.amp.data.entity.Amperage_short;
+import com.amp.amp.data.entity.Insulation_type;
+import com.amp.amp.data.entity.Material_type;
+import com.amp.amp.data.entity.Method_of_laying;
+import com.amp.amp.data.entity.Nominal_size;
+import com.amp.amp.data.entity.Number_of_core;
+import com.amp.amp.data.entity.Resistivity;
+import com.amp.amp.data.entity.Type_amperage;
 import com.amp.amp.data.entity.Type_of_environment;
 
 import java.util.List;
@@ -20,49 +38,79 @@ public class App extends Application {
     }
 
 
-    private Type_of_environment_Dao mtype_of_environment_Dao;
-    private List<String> mAllType_of_environment;
-    private LiveData<List<Type_of_environment>> mAllType_of_environments;
+    private Type_of_environment_Dao type_of_environment_Dao;
+    private List<String> AllType_of_environments;
+    private LiveData<List<Type_of_environment>> AllLiveDataType_of_environments;
 
-  /*  private Type_amperage_Dao mtype_amperage_dao;
-    private final LiveData<List<Type_amperage>> mAllType_amperages;
+    private Type_amperage_Dao type_amperage_Dao;
+    private List<String> AllType_amperages;
+    private LiveData<List<Type_amperage>> AllLiveDataType_amperages;
 
-    private Method_of_laying_Dao mmethod_of_laying_dao;
-    private final LiveData<List<Method_of_laying>> mAllMethod_of_layings;
+    private Method_of_laying_Dao method_of_laying_Dao;
+    private List<String> AllMethod_of_layings;
+    private LiveData<List<Method_of_laying>> AllLiveDataMethod_of_layings;
 
-    private Number_of_core_Dao mnumber_of_cores_dao;
-    private final LiveData<List<Number_of_core>> mAllNumber_of_cores;
+    private Number_of_core_Dao number_of_cores_Dao;
+    private List<String> AllNumber_of_cores;
+    private LiveData<List<Number_of_core>> AllLiveDataNumber_of_cores;
 
-    private Nominal_size_Dao mnominal_size_dao;
-    private final LiveData<List<Nominal_size>> mAllNominal_sizes;
+    private Nominal_size_Dao nominal_size_Dao;
+    private List<Double> AllNominal_sizes;
+    private LiveData<List<Nominal_size>> AllLiveDataNominal_sizes;
 
-    private Material_type_Dao mmaterial_type_dao;
-    private final LiveData<List<Material_type>> mAllMaterial_types;
+    private Material_type_Dao material_type_Dao;
+    private List<String> AllMaterial_types;
+    private LiveData<List<Material_type>> AllLiveDataMaterial_types;
 
-    private Insulation_type_Dao minsulation_type_dao;
-    private final LiveData<List<Insulation_type>> mAllInsulation_types;
+    private Insulation_type_Dao insulation_type_Dao;
+    private List<String> AllInsulation_types;
+    private LiveData<List<Insulation_type>> AllLiveDataInsulation_types;
 
-    private Amperage_short_Dao mamperage_short_dao;
-    private final LiveData<List<Amperage_short>> mAllAmperage_shorts;
+    private Resistivity_Dao resistivity_Dao;
+    private List<String> AllResistivitys;
+    private LiveData<List<Resistivity>> AllLiveDataResistivitys;
 
-    private Amperage_Dao mamperage_dao;
-    private final LiveData<List<Amperage>> mAllAmperages;
+    private Amperage_short_Dao amperage_short_Dao;
+    private List<String> AllAmperage_shorts;
+    private LiveData<List<Amperage_short>> AllLiveDataAmperage_shorts;
 
-    private Resistivity_Dao mresistivity_dao;
-    private final LiveData<List<Resistivity>> mAllResistivitys;
-*/
+    private Amperage_Dao amperage_Dao;
+    private List<String> AllAmperages;
+    private LiveData<List<Amperage>> AllLiveDataAmperages;
+
 
     @Override
     public void onCreate() {
         super.onCreate();
-
         instance = this;
-
         database = App_Database.getDatabase(instance);
 
+        type_of_environment_Dao = database.type_of_environment_Dao();
+        AllType_of_environments = type_of_environment_Dao.getAll();
 
-        mtype_of_environment_Dao = database.type_of_environment_Dao();
-        mAllType_of_environment = mtype_of_environment_Dao.getAll();
+        type_amperage_Dao = database.type_amperage_Dao();
+        AllType_amperages = type_amperage_Dao.getAll();
+
+        method_of_laying_Dao = database.method_of_laying_Dao();
+        AllMethod_of_layings = method_of_laying_Dao.getAll();
+
+        number_of_cores_Dao = database.number_of_core_Dao();
+        AllNumber_of_cores = number_of_cores_Dao.getAll();
+
+        nominal_size_Dao = database.nominal_size_Dao();
+        AllNominal_sizes = nominal_size_Dao.getAll();
+
+        material_type_Dao = database.material_type_Dao();
+        AllMaterial_types = material_type_Dao.getAll();
+
+        insulation_type_Dao = database.insulation_type_Dao();
+        AllInsulation_types = insulation_type_Dao.getAll();
+
+        resistivity_Dao = database.resistivity_Dao();
+
+        amperage_short_Dao = database.amperage_short_Dao();
+
+        amperage_Dao = database.amperage_Dao();
 
     }
 
@@ -104,126 +152,11 @@ public class App extends Application {
 
     //  }
 
-    public Type_of_environment_Dao gettype_of_environment_dao() {
-        return mtype_of_environment_Dao;
-    }
 
-    public void settype_of_environment_dao(Type_of_environment_Dao mtype_of_environment_dao) {
-        this.mtype_of_environment_Dao = mtype_of_environment_dao;
-    }
 
-    /* public Type_amperage_Dao gettype_amperage_dao() {
-         return mtype_amperage_dao;
-     }
 
-     public void settype_amperage_dao(Type_amperage_Dao mtype_amperage_dao) {
-         this.mtype_amperage_dao = mtype_amperage_dao;
-     }
 
-     public Method_of_laying_Dao getmethod_of_laying_dao() {
-         return mmethod_of_laying_dao;
-     }
 
-     public void setmethod_of_laying_dao(Method_of_laying_Dao mmethod_of_laying_dao) {
-         this.mmethod_of_laying_dao = mmethod_of_laying_dao;
-     }
-
-     public Number_of_core_Dao getnumber_of_cores_dao() {
-         return mnumber_of_cores_dao;
-     }
-
-     public void setnumber_of_cores_dao(Number_of_core_Dao mnumber_of_cores_dao) {
-         this.mnumber_of_cores_dao = mnumber_of_cores_dao;
-     }
-
-     public Nominal_size_Dao getnominal_size_dao() {
-         return mnominal_size_dao;
-     }
-
-     public void setnominal_size_dao(Nominal_size_Dao mnominal_size_dao) {
-         this.mnominal_size_dao = mnominal_size_dao;
-     }
-
-     public Material_type_Dao getmaterial_type_dao() {
-         return mmaterial_type_dao;
-     }
-
-     public void setmaterial_type_dao(Material_type_Dao mmaterial_type_dao) {
-         this.mmaterial_type_dao = mmaterial_type_dao;
-     }
-
-     public Insulation_type_Dao getinsulation_type_dao() {
-         return minsulation_type_dao;
-     }
-
-     public void setinsulation_type_dao(Insulation_type_Dao minsulation_type_dao) {
-         this.minsulation_type_dao = minsulation_type_dao;
-     }
-
-     public Amperage_short_Dao getamperage_short_dao() {
-         return mamperage_short_dao;
-     }
-
-     public void setamperage_short_dao(Amperage_short_Dao mamperage_short_dao) {
-         this.mamperage_short_dao = mamperage_short_dao;
-     }
-
-     public Amperage_Dao getamperage_dao() {
-         return mamperage_dao;
-     }
-
-     public void setamperage_dao(Amperage_Dao mamperage_dao) {
-         this.mamperage_dao = mamperage_dao;
-     }
-
-     public Resistivity_Dao getresistivity_dao() {
-         return mresistivity_dao;
-     }
-
-     public void setresistivity_dao(Resistivity_Dao mresistivity_dao) {
-         this.mresistivity_dao = mresistivity_dao;
-     }
- */
-    public LiveData<List<Type_of_environment>> getAllLiveData_Type_of_environment() {
-        return mAllType_of_environments;
-    }
-
- /*  public LiveData<List<Type_amperage>> getAllLiveData_Type_amperage() {
-        return mAllType_amperages;
-    }
-
-    public LiveData<List<Method_of_laying>> getAllLiveData_Method_of_laying() {
-        return mAllMethod_of_layings;
-    }
-
-    public LiveData<List<Number_of_core>> getAllLiveData_Number_of_core() {
-        return mAllNumber_of_cores;
-    }
-
-    public LiveData<List<Nominal_size>> getAllLiveData_Nominal_size() {
-        return mAllNominal_sizes;
-    }
-
-    public LiveData<List<Material_type>> getAllLiveData_Material_type() {
-        return mAllMaterial_types;
-    }
-
-    public LiveData<List<Insulation_type>> getAllLiveData_Insulation_type() {
-        return mAllInsulation_types;
-    }
-
-    public LiveData<List<Amperage_short>> getAllLiveData_Amperage_short() {
-        return mAllAmperage_shorts;
-    }
-
-    public LiveData<List<Amperage>> getAllLiveData_Amperage() {
-        return mAllAmperages;
-    }
-
-    public LiveData<List<Resistivity>> getAllLiveData_Resistivitye() {
-        return mAllResistivitys;
-    }
-*/
 
  /*  public void insert(Type_of_environment type_of_environment) {
         App_Database.databaseWriteExecutor.execute(() -> {

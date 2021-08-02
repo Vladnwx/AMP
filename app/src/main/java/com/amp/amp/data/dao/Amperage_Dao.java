@@ -15,8 +15,8 @@ import java.util.List;
 @Dao
 public interface Amperage_Dao {
 
-        /*@Query("SELECT * FROM amperage")
-    List<String> getAll();*/
+    // @Query("SELECT * FROM amperage")
+    // List<String> getAll();
 
     @Query("SELECT * FROM amperage")
     LiveData<List<Amperage>> getAllLiveData();
@@ -27,7 +27,7 @@ public interface Amperage_Dao {
     @Query("DELETE FROM amperage")
     void deleteAll();
 
-    @Insert (onConflict = OnConflictStrategy.IGNORE)
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     void insert(Amperage amperage);
 
     @Update

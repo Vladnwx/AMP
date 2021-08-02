@@ -33,10 +33,10 @@ public interface Insulation_type_Dao {
             "                                insulation_type\n" +
             "                            )\n" +
             "                            VALUES (\n" +
-            "                                'cross-linked polyethylene'\n" +
+            "                                'PEX'\n" +
             "                            ),\n" +
             "                            (\n" +
-            "                                'pvc'\n" +
+            "                                'PVC'\n" +
             "                            );")
     void defaultgreate();
 
