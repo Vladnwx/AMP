@@ -1,33 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<TableLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/tablelayout_amperage"
+
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".ScrollingActivity"
-    tools:showIn="@layout/amperage_table">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+    android:layout_height="match_parent">
 
-        <TableLayout
-            android:id="@+id/tablelayout_amperage"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    <TableRow>
 
-            <TableRow>
+        <TextView
+            android:id="@+id/TextView_type_of_environment"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/type_of_environment"
+            android:textSize="24sp" />
 
-                <TextView
-                    android:id="@+id/TextView_type_of_environment"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:text="@string/type_of_environment"
-                    android:textSize="24sp" />
-
-                <Spinner
+        <Spinner
                     android:id="@+id/spinner_type_of_environment"
                     android:layout_width="120sp"
                     android:layout_height="fill_parent"
@@ -164,7 +156,7 @@
 
                 <TextView
                     android:id="@+id/TextView_nominal_size"
-                    android:layout_width="wrap_content"
+                    android:layout_width="280sp"
                     android:layout_height="match_parent"
                     android:text="@string/conductor_cross_section"
                     android:textSize="24sp" />
@@ -177,6 +169,4 @@
             </TableRow>
 
 
-        </TableLayout>
-    </LinearLayout>
-</androidx.core.widget.NestedScrollView>
+</TableLayout>

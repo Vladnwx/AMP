@@ -35,7 +35,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <include layout="@layout/content_scrolling" />
-    <include layout="@layout/amperage_table" />
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
@@ -45,5 +45,7 @@
         app:layout_anchor="@id/app_bar"
         app:layout_anchorGravity="bottom|end"
         app:srcCompat="@android:drawable/ic_lock_idle_low_battery" />
+
+    <include layout="@layout/amperage_table" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
