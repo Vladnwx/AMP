@@ -20,24 +20,24 @@ public class Resistivity implements Parcelable {
     private int id;
 
     @NonNull
-    @ColumnInfo(name = "material_type")
+    @ColumnInfo(name = "material_type", index = true)
     private String material_type;
 
     @NonNull
-    @ColumnInfo(name = "nominal_size")
-    private double nominal_size;
+    @ColumnInfo(name = "nominal_size", index = true)
+    private Double nominal_size;
 
     @NonNull
     @ColumnInfo(name = "R")
-    private double R;
+    private Double R;
     @NonNull
     @ColumnInfo(name = "X")
-    private double X;
+    private Double X;
     @NonNull
     @ColumnInfo(name = "p")
-    private double p;
+    private Double p;
 
-    public Resistivity(int id, @NonNull String material_type, double nominal_size, double r, double x, double p) {
+    public Resistivity(int id, @NonNull String material_type, Double nominal_size, Double r, Double x, Double p) {
         this.id = id;
         this.material_type = material_type;
         this.nominal_size = nominal_size;
@@ -46,11 +46,11 @@ public class Resistivity implements Parcelable {
         this.p = p;
     }
 
-    public double getP() {
+    public Double getP() {
         return p;
     }
 
-    public void setP(double p) {
+    public void setP(Double p) {
         this.p = p;
     }
 
@@ -94,27 +94,27 @@ public class Resistivity implements Parcelable {
         this.material_type = material_type;
     }
 
-    public double getNominal_size() {
+    public Double getNominal_size() {
         return nominal_size;
     }
 
-    public void setNominal_size(double nominal_size) {
+    public void setNominal_size(Double nominal_size) {
         this.nominal_size = nominal_size;
     }
 
-    public double getR() {
+    public Double getR() {
         return R;
     }
 
-    public void setR(double r) {
+    public void setR(Double r) {
         R = r;
     }
 
-    public double getX() {
+    public Double getX() {
         return X;
     }
 
-    public void setX(double x) {
+    public void setX(Double x) {
         X = x;
     }
 

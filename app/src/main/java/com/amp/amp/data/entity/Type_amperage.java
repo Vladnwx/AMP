@@ -53,4 +53,9 @@ public class Type_amperage implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(mType_amperage);
     }
+
+    @Override
+    public String toString() {
+        return mType_amperage;
+    }
 }

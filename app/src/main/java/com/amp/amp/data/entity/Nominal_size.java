@@ -9,7 +9,7 @@ import androidx.room.Entity;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
-@Entity(indices = {@Index(value = {"Nominal_size"},unique = true)})
+@Entity(indices = {@Index(value = {"Nominal_size"}, unique = true)})
 public class Nominal_size implements Parcelable {
     @PrimaryKey
     @NonNull
@@ -36,7 +36,7 @@ public class Nominal_size implements Parcelable {
         }
     };
 
-    public double getNominal_size() {
+    public Double getNominal_size() {
         return mNominal_size;
     }
 

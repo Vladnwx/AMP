@@ -38,34 +38,34 @@ public class App extends Application {
 
 
     private Type_of_environment_Dao mtype_of_environment_dao;
-    private LiveData<List<Type_of_environment>> mAllType_of_environments;
+    private final LiveData<List<Type_of_environment>> mAllType_of_environments;
 
     private Type_amperage_Dao mtype_amperage_dao;
-    private LiveData<List<Type_amperage>> mAllType_amperages;
+    private final LiveData<List<Type_amperage>> mAllType_amperages;
 
     private Method_of_laying_Dao mmethod_of_laying_dao;
-    private LiveData<List<Method_of_laying>> mAllMethod_of_layings;
+    private final LiveData<List<Method_of_laying>> mAllMethod_of_layings;
 
     private Number_of_core_Dao mnumber_of_cores_dao;
-    private LiveData<List<Number_of_core>> mAllNumber_of_cores;
+    private final LiveData<List<Number_of_core>> mAllNumber_of_cores;
 
     private Nominal_size_Dao mnominal_size_dao;
-    private LiveData<List<Nominal_size>> mAllNominal_sizes;
+    private final LiveData<List<Nominal_size>> mAllNominal_sizes;
 
     private Material_type_Dao mmaterial_type_dao;
-    private LiveData<List<Material_type>> mAllMaterial_types;
+    private final LiveData<List<Material_type>> mAllMaterial_types;
 
     private Insulation_type_Dao minsulation_type_dao;
-    private LiveData<List<Insulation_type>> mAllInsulation_types;
+    private final LiveData<List<Insulation_type>> mAllInsulation_types;
 
     private Amperage_short_Dao mamperage_short_dao;
-    private LiveData<List<Amperage_short>> mAllAmperage_shorts;
+    private final LiveData<List<Amperage_short>> mAllAmperage_shorts;
 
     private Amperage_Dao mamperage_dao;
-    private LiveData<List<Amperage>> mAllAmperages;
+    private final LiveData<List<Amperage>> mAllAmperages;
 
     private Resistivity_Dao mresistivity_dao;
-    private LiveData<List<Resistivity>> mAllResistivitys;
+    private final LiveData<List<Resistivity>> mAllResistivitys;
 
 
     public App (Application application) {

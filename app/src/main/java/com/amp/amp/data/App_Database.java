@@ -72,7 +72,7 @@ public abstract class App_Database extends RoomDatabase {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
                             App_Database.class, "amperage")
                             .addCallback(sRoomDatabaseCallback)
-                          //  .createFromAsset("amperage.db")
+                            //  .createFromAsset("amperage.db")
                             .build();
                 }
             }
@@ -81,7 +81,7 @@ public abstract class App_Database extends RoomDatabase {
     }
 
 
-  private static RoomDatabase.Callback sRoomDatabaseCallback = new RoomDatabase.Callback() {
+    private static final RoomDatabase.Callback sRoomDatabaseCallback = new RoomDatabase.Callback() {
         @Override
         public void onCreate(@NonNull SupportSQLiteDatabase db) {
             super.onCreate(db);
@@ -95,7 +95,7 @@ public abstract class App_Database extends RoomDatabase {
                 Material_type_Dao material_type_Dao = INSTANCE.material_type_Dao();
                 Insulation_type_Dao insulation_type_Dao = INSTANCE.insulation_type_Dao();
                 Amperage_short_Dao amperage_short_Dao = INSTANCE.amperage_short_Dao();
-                Amperage_Dao amperage_Dao= INSTANCE.amperage_Dao();
+                Amperage_Dao amperage_Dao = INSTANCE.amperage_Dao();
                 Resistivity_Dao resistivity_dao = INSTANCE.resistivity_dao();
 
                 type_of_environment_dao.deleteAll();

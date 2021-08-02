@@ -19,13 +19,13 @@ public class Amperage_short implements Parcelable {
     @ColumnInfo(name = "id")
     private int id;
     @NonNull
-    @ColumnInfo(name = "nominal_size")
+    @ColumnInfo(name = "nominal_size", index = true)
     private int nominal_size;
     @NonNull
-    @ColumnInfo(name = "material_type")
+    @ColumnInfo(name = "material_type", index = true)
     private String material_type;
     @NonNull
-    @ColumnInfo(name = "insulation_type")
+    @ColumnInfo(name = "insulation_type", index = true)
     private String insulation_type;
     @NonNull
     @ColumnInfo(name = "amperage_short")

@@ -22,22 +22,22 @@ public class Amperage implements Parcelable {
     @ColumnInfo(name = "id")
     public int id;
     @NonNull
-    @ColumnInfo(name = "nominal_size")
+    @ColumnInfo(name = "nominal_size", index = true)
     public int nominal_size;
     @NonNull
-    @ColumnInfo(name = "material_type")
+    @ColumnInfo(name = "material_type", index = true)
     public String material_type;
     @NonNull
-    @ColumnInfo(name = "insulation_type")
+    @ColumnInfo(name = "insulation_type", index = true)
     public String insulation_type;
     @NonNull
-    @ColumnInfo(name = "type_amperage")
+    @ColumnInfo(name = "type_amperage", index = true)
     public String type_amperage;
     @NonNull
-    @ColumnInfo(name = "number_of_core")
+    @ColumnInfo(name = "number_of_core", index = true)
     public String number_of_core;
     @NonNull
-    @ColumnInfo(name = "type_of_environment")
+    @ColumnInfo(name = "type_of_environment", index = true)
     public String type_of_environment;
     @NonNull
     @ColumnInfo(name = "amperage")
