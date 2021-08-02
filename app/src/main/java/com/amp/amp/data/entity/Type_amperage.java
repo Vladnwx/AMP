@@ -58,4 +58,19 @@ public class Type_amperage implements Parcelable {
     public String toString() {
         return mType_amperage;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Type_amperage that = (Type_amperage) o;
+
+        return mType_amperage.equals(that.mType_amperage);
+    }
+
+    @Override
+    public int hashCode() {
+        return mType_amperage.hashCode();
+    }
 }

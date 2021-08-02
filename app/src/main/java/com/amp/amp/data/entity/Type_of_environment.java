@@ -74,4 +74,6 @@ public class Type_of_environment implements Parcelable {
     public String toString() {
         return mType_of_environment;
     }
+
+
 }

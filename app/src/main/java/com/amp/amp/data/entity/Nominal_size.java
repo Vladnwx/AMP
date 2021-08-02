@@ -40,7 +40,7 @@ public class Nominal_size implements Parcelable {
         return mNominal_size;
     }
 
-    public void setNominal_size(double mNominal_size) {
+    public void setNominal_size(Double mNominal_size) {
         this.mNominal_size = mNominal_size;
     }
 
