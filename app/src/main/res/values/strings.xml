@@ -4,4 +4,14 @@
         "TEXT.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+    <string name="type_of_environment">Type of environment</string>
+    <string name="type_amperage">Type amperage</string>
+    <string name="number_of_core">Number of core</string>
+    <string name="material_type">Material type</string>
+    <string name="insulation_type">Insulation type</string>
+    <string name="method_of_laying">Method of laying</string>
+    <string name="equivalent_section">Equivalent section</string>
+    <string name="resistance_r_ohm_km">Resistance r ohm/km</string>
+    <string name="resistance_x_ohm_km">Resistance x ohm/km</string>
+    <string name="conductor_cross_section">Conductor cross section</string>
 </resources>

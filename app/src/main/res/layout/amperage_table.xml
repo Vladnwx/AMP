@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ScrollingActivity"
+    tools:showIn="@layout/amperage_table">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TableLayout
+            android:id="@+id/tablelayout_amperage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/TextView_type_of_environment"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="@string/type_of_environment"
+                    android:textSize="24sp" />
+
+                <Spinner
+                    android:id="@+id/spinner_type_of_environment"
+                    android:layout_width="120sp"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:spinnerMode="dialog" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/TextView_type_amperage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/type_amperage"
+                    android:textSize="24sp" />
+
+                <Spinner
+                    android:id="@+id/spinner_type_amperage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/TextView_number_of_cores"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/number_of_core"
+                    android:textSize="24sp" />
+
+                <Spinner
+                    android:id="@+id/spinner_number_of_cores"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/TextView_material_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/material_type"
+                    android:textSize="24sp" />
+
+                <Spinner
+                    android:id="@+id/spinner_material_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/TextView_insulation_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/insulation_type"
+                    android:textSize="24sp" />
+
+                <Spinner
+                    android:id="@+id/spinner_insulation_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/TextView_method_of_laying"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/method_of_laying"
+                    android:textSize="24sp" />
+
+                <Spinner
+                    android:id="@+id/spinner_method_of_laying"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/equivalent_section"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:hint="0"
+                    android:textSize="24sp" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/resistance_r_ohm_km"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/TextView_Resistivity_R"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:hint="0"
+                    android:textSize="24sp" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/resistance_x_ohm_km"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/TextView_Resistivity_X"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:hint="0"
+                    android:textSize="24sp" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/TextView_nominal_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/conductor_cross_section"
+                    android:textSize="24sp" />
+
+                <Spinner
+                    android:id="@+id/spinner_nominal_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:spinnerMode="dialog" />
+            </TableRow>
+
+
+        </TableLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
