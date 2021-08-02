@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 
 import com.amp.amp.R;
 
@@ -27,11 +26,5 @@ public class MainFragment extends Fragment {
         return inflater.inflate(R.layout.main_fragment, container, false);
     }
 
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(MainViewModel.class);
-        // TODO: Use the ViewModel
-    }
 
 }
