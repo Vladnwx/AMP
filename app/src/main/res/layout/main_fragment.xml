@@ -8,13 +8,15 @@
 
     android:layout_width="match_parent"
 
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_margin="5sp">
+
 
     <TableRow>
 
         <TextView
             android:id="@+id/TextView_type_of_environment"
-            android:layout_width="wrap_content"
+            android:layout_width="280sp"
             android:layout_height="fill_parent"
             android:text="@string/type_of_environment"
             android:textSize="24sp" />
@@ -31,7 +33,7 @@
 
         <TextView
             android:id="@+id/TextView_type_amperage"
-            android:layout_width="wrap_content"
+            android:layout_width="280sp"
             android:layout_height="match_parent"
             android:text="@string/type_amperage"
             android:textSize="24sp" />
@@ -45,14 +47,14 @@
     <TableRow>
 
         <TextView
-            android:id="@+id/TextView_number_of_cores"
-            android:layout_width="wrap_content"
+            android:id="@+id/TextView_number_of_core"
+            android:layout_width="280sp"
             android:layout_height="match_parent"
             android:text="@string/number_of_core"
             android:textSize="24sp" />
 
         <Spinner
-            android:id="@+id/spinner_number_of_cores"
+            android:id="@+id/spinner_number_of_core"
             android:layout_width="wrap_content"
             android:layout_height="match_parent" />
     </TableRow>
@@ -61,7 +63,7 @@
 
         <TextView
             android:id="@+id/TextView_material_type"
-            android:layout_width="wrap_content"
+            android:layout_width="280sp"
             android:layout_height="match_parent"
             android:text="@string/material_type"
             android:textSize="24sp" />
@@ -76,7 +78,7 @@
 
         <TextView
             android:id="@+id/TextView_insulation_type"
-            android:layout_width="wrap_content"
+            android:layout_width="280sp"
             android:layout_height="match_parent"
             android:text="@string/insulation_type"
             android:textSize="24sp" />
@@ -91,7 +93,7 @@
 
         <TextView
             android:id="@+id/TextView_method_of_laying"
-            android:layout_width="wrap_content"
+            android:layout_width="280sp"
             android:layout_height="match_parent"
             android:text="@string/method_of_laying"
             android:textSize="24sp" />
@@ -105,12 +107,14 @@
     <TableRow>
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/TextView_equivalent_section"
+            android:layout_width="280sp"
             android:layout_height="match_parent"
             android:text="@string/equivalent_section"
             android:textSize="24sp" />
 
         <TextView
+            android:id="@+id/TextView_equivalent_section_value"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
@@ -121,13 +125,14 @@
     <TableRow>
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/TextView_Resistance_R"
+            android:layout_width="280sp"
             android:layout_height="match_parent"
             android:text="@string/resistance_r_ohm_km"
             android:textSize="24sp" />
 
         <TextView
-            android:id="@+id/TextView_Resistivity_R"
+            android:id="@+id/TextView_Resistance_R_value"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
@@ -138,13 +143,14 @@
     <TableRow>
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/TextView_Resistance_X"
+            android:layout_width="280sp"
             android:layout_height="match_parent"
             android:text="@string/resistance_x_ohm_km"
             android:textSize="24sp" />
 
         <TextView
-            android:id="@+id/TextView_Resistivity_X"
+            android:id="@+id/TextView_Resistance_X_value"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"

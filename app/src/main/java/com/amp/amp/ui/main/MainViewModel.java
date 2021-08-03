@@ -6,7 +6,6 @@ import androidx.lifecycle.ViewModel;
 
 import com.amp.amp.data.App;
 
-import java.util.Collections;
 import java.util.List;
 
 public class MainViewModel extends ViewModel {
@@ -20,7 +19,7 @@ public class MainViewModel extends ViewModel {
     private List<String> material_types = App.getInstance().getMaterial_type_Dao().getAll();
     private List<String> insulation_types = App.getInstance().getInsulation_type_Dao().getAll();
     private List<String> method_of_layings = App.getInstance().getMethod_of_laying_Dao().getAll();
-    private List<String> nominal_sizes = Collections.singletonList(String.valueOf(App.getInstance().getNominal_size_Dao().getAll()));
+    private List<Double> nominal_sizes = App.getInstance().getNominal_size_Dao().getAll();
     private Double R;
     private Double X;
     private int amperage_short;
@@ -51,7 +50,7 @@ public class MainViewModel extends ViewModel {
         return method_of_layings;
     }
 
-    public List<String> getNominal_sizes() {
+    public List<Double> getNominal_sizes() {
         return nominal_sizes;
     }
 
