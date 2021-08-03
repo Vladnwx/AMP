@@ -1,21 +1,89 @@
 package com.amp.amp.ui.main;
 
+import android.content.Context;
+
 import androidx.lifecycle.ViewModel;
 
-import java.util.ArrayList;
+import com.amp.amp.data.App;
+
+import java.util.Collections;
 import java.util.List;
 
 public class MainViewModel extends ViewModel {
 
-        List<String> type_of_environments = new ArrayList<String>();
-        List<String> type_amperages = new ArrayList<String>();
-        List<String> number_of_cores = new ArrayList<String>();
-        List<String> material_types = new ArrayList<String>();
-        List<String> insulation_types = new ArrayList<String>();
-        List<String> method_of_layings = new ArrayList<String>();
-        List<Double> nominal_sizes = new ArrayList<>();
-        List<String> amperage_shorts = new ArrayList<String>();
-        List<String> amperages = new ArrayList<String>();
+    private Context instance;
+
+    private List<String> type_of_environments = App.getInstance().getType_of_environment_Dao().getAll();
+    //  private List<String> type_of_environments = App.getInstance().getAllType_of_environments();
+    private List<String> type_amperages = App.getInstance().getType_amperage_Dao().getAll();
+    private List<String> number_of_cores = App.getInstance().getNumber_of_cores_Dao().getAll();
+    private List<String> material_types = App.getInstance().getMaterial_type_Dao().getAll();
+    private List<String> insulation_types = App.getInstance().getInsulation_type_Dao().getAll();
+    private List<String> method_of_layings = App.getInstance().getMethod_of_laying_Dao().getAll();
+    private List<String> nominal_sizes = Collections.singletonList(String.valueOf(App.getInstance().getNominal_size_Dao().getAll()));
+    private Double R;
+    private Double X;
+    private int amperage_short;
+    private int amperage;
 
 
+    public List<String> getType_of_environments() {
+        return type_of_environments;
+    }
+
+    public List<String> getType_amperages() {
+        return type_amperages;
+    }
+
+    public List<String> getNumber_of_cores() {
+        return number_of_cores;
+    }
+
+    public List<String> getMaterial_types() {
+        return material_types;
+    }
+
+    public List<String> getInsulation_types() {
+        return insulation_types;
+    }
+
+    public List<String> getMethod_of_layings() {
+        return method_of_layings;
+    }
+
+    public List<String> getNominal_sizes() {
+        return nominal_sizes;
+    }
+
+    public Double getR() {
+        return R;
+    }
+
+    public void setR(Double r) {
+        R = r;
+    }
+
+    public Double getX() {
+        return X;
+    }
+
+    public void setX(Double x) {
+        X = x;
+    }
+
+    public int getAmperage_short() {
+        return amperage_short;
+    }
+
+    public void setAmperage_short(int amperage_short) {
+        this.amperage_short = amperage_short;
+    }
+
+    public int getAmperage() {
+        return amperage;
+    }
+
+    public void setAmperage(int amperage) {
+        this.amperage = amperage;
+    }
 }

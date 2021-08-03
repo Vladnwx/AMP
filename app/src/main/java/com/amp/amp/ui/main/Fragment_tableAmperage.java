@@ -11,12 +11,12 @@ import androidx.fragment.app.Fragment;
 
 import com.amp.amp.R;
 
-public class MainFragment extends Fragment {
+public class Fragment_tableAmperage extends Fragment {
 
     private MainViewModel mViewModel;
 
-    public static MainFragment newInstance() {
-        return new MainFragment();
+    public static Fragment_tableAmperage newInstance() {
+        return new Fragment_tableAmperage();
     }
 
     @Nullable

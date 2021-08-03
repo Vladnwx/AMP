@@ -4,7 +4,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.amp.amp.ui.main.MainFragment;
+import com.amp.amp.ui.main.Fragment_tableAmperage;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,8 +14,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.main_activity);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.container, MainFragment.newInstance())
+                    .replace(R.id.container, Fragment_tableAmperage.newInstance())
                     .commitNow();
         }
+
     }
 }

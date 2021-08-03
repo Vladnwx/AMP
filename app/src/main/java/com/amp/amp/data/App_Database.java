@@ -54,8 +54,6 @@ public abstract class App_Database extends RoomDatabase {
     public abstract Nominal_size_Dao nominal_size_Dao();
     public abstract Material_type_Dao material_type_Dao();
     public abstract Insulation_type_Dao insulation_type_Dao();
-    public abstract Amperage_short_Dao amperage_short_Dao();
-    public abstract Amperage_Dao amperage_Dao();
     private static final RoomDatabase.Callback sRoomDatabaseCallback = new RoomDatabase.Callback() {
         @Override
         public void onCreate(@NonNull SupportSQLiteDatabase db) {
@@ -97,17 +95,20 @@ public abstract class App_Database extends RoomDatabase {
 
 
 
-               /* Type_of_environment type_of_environment = new Type_of_environment("Air");
+               /* Type_of_environment type_of_environment = new Type_of_environment("air");
 
                 type_of_environment_dao.insert(type_of_environment);
 
-                type_of_environment = new Type_of_environment("Eart");
+                type_of_environment = new Type_of_environment("eart");
 
                 type_of_environment_dao.insert(type_of_environment);*/
             });
         }
     };
 
+    public abstract Amperage_short_Dao amperage_short_Dao();
+
+    public abstract Amperage_Dao amperage_Dao();
 
     private static volatile App_Database INSTANCE;
     private static final int NUMBER_OF_THREADS = 4;
@@ -131,4 +132,5 @@ public abstract class App_Database extends RoomDatabase {
     }
 
     public abstract Resistivity_Dao resistivity_Dao();
+
 }
