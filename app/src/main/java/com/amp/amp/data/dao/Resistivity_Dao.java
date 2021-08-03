@@ -19,10 +19,16 @@ public interface Resistivity_Dao {
     // List<String> getAll();
 
     @Query("SELECT R  FROM resistivity WHERE material_type = :tmaterial_type AND nominal_size = :tnominal_size")
-    double getR(String tmaterial_type, double tnominal_size);
+    Double getR(String tmaterial_type, Double tnominal_size);
+
+    @Query("SELECT R  FROM resistivity WHERE material_type = :tmaterial_type AND nominal_size = :tnominal_size")
+    LiveData<Double> getLiveDataR(String tmaterial_type, Double tnominal_size);
 
     @Query("SELECT X  FROM resistivity WHERE material_type = :tmaterial_type AND nominal_size = :tnominal_size")
-    double getX(String tmaterial_type, double tnominal_size);
+    Double getX(String tmaterial_type, Double tnominal_size);
+
+    @Query("SELECT X  FROM resistivity WHERE material_type = :tmaterial_type AND nominal_size = :tnominal_size")
+    LiveData<Double> getLiveDataX(String tmaterial_type, Double tnominal_size);
 
     @Query("SELECT * FROM resistivity")
     LiveData<List<Resistivity>> getAllLiveData();
@@ -31,7 +37,7 @@ public interface Resistivity_Dao {
     LiveData<List<Resistivity>> getAlphabetizedAmperage_short();
 
     @Query("DELETE FROM resistivity")
-   void deleteAll();
+    void deleteAll();
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     void insert(Resistivity resistivity);

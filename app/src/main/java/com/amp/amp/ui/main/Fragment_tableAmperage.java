@@ -19,7 +19,7 @@ import java.util.List;
 
 public class Fragment_tableAmperage extends Fragment {
 
-    private MainViewModel mViewModel;
+    private ViewModel_tableAmperage mViewModel;
     private List<String> type_of_environments = App.getInstance().getType_of_environment_Dao().getAll();
     private List<String> type_amperages = App.getInstance().getType_amperage_Dao().getAll();
     private List<String> number_of_cores = App.getInstance().getNumber_of_cores_Dao().getAll();
@@ -98,6 +98,9 @@ public class Fragment_tableAmperage extends Fragment {
         spinner_insulation_type.setAdapter(adapter_insulation_type);
         spinner_method_of_laying.setAdapter(adapter_method_of_laying);
         spinner_nominal_size.setAdapter(adapter_nominal_size);
+
+        TextView_Resistance_R_value.setText(String.valueOf(App.getInstance().getResistivity_Dao().getR(spinner_material_type.getSelectedItem().toString(), Double.parseDouble(spinner_nominal_size.getSelectedItem().toString()))));
+        TextView_Resistance_X_value.setText(String.valueOf(App.getInstance().getResistivity_Dao().getX(spinner_material_type.getSelectedItem().toString(), Double.parseDouble(spinner_nominal_size.getSelectedItem().toString()))));
 
 
         TextView_type_of_environment.setText("Окружающая среда");

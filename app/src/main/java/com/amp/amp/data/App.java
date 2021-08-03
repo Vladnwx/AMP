@@ -67,6 +67,10 @@ public class App extends Application {
     private LiveData<List<Insulation_type>> AllLiveDataInsulation_types;
 
     private Resistivity_Dao resistivity_Dao;
+    private Double R;
+    private Double X;
+    private LiveData<Double> LiveDataR;
+    private LiveData<Double> LiveDataX;
     private List<String> AllResistivitys;
     private LiveData<List<Resistivity>> AllLiveDataResistivitys;
 
@@ -87,26 +91,34 @@ public class App extends Application {
 
         type_of_environment_Dao = database.type_of_environment_Dao();
         AllType_of_environments = type_of_environment_Dao.getAll();
+        AllLiveDataType_of_environments = type_of_environment_Dao.getAllLiveData();
 
         type_amperage_Dao = database.type_amperage_Dao();
         AllType_amperages = type_amperage_Dao.getAll();
+        AllLiveDataType_amperages = type_amperage_Dao.getAllLiveData();
 
         method_of_laying_Dao = database.method_of_laying_Dao();
         AllMethod_of_layings = method_of_laying_Dao.getAll();
+        AllLiveDataMethod_of_layings = method_of_laying_Dao.getAllLiveData();
 
         number_of_cores_Dao = database.number_of_core_Dao();
         AllNumber_of_cores = number_of_cores_Dao.getAll();
+        AllLiveDataNumber_of_cores = number_of_cores_Dao.getAllLiveData();
 
         nominal_size_Dao = database.nominal_size_Dao();
         AllNominal_sizes = nominal_size_Dao.getAll();
+        AllLiveDataNominal_sizes = nominal_size_Dao.getAllLiveData();
 
         material_type_Dao = database.material_type_Dao();
         AllMaterial_types = material_type_Dao.getAll();
+        AllLiveDataMaterial_types = material_type_Dao.getAllLiveData();
 
         insulation_type_Dao = database.insulation_type_Dao();
         AllInsulation_types = insulation_type_Dao.getAll();
+        AllLiveDataInsulation_types = insulation_type_Dao.getAllLiveData();
 
         resistivity_Dao = database.resistivity_Dao();
+
 
         amperage_short_Dao = database.amperage_short_Dao();
 
@@ -288,6 +300,38 @@ public class App extends Application {
 
     public void setResistivity_Dao(Resistivity_Dao resistivity_Dao) {
         this.resistivity_Dao = resistivity_Dao;
+    }
+
+    public Double getR(String tmaterial_type, Double tnominal_size) {
+        return R = resistivity_Dao.getR(tmaterial_type, tnominal_size);
+    }
+
+    public void setR(String tmaterial_type, Double tnominal_size, Double r) {
+        R = r;
+    }
+
+    public Double getX(String tmaterial_type, Double tnominal_size) {
+        return X = resistivity_Dao.getX(tmaterial_type, tnominal_size);
+    }
+
+    public void setX(Double x) {
+        X = x;
+    }
+
+    public LiveData<Double> getLiveDataR(String tmaterial_type, Double tnominal_size) {
+        return LiveDataR = resistivity_Dao.getLiveDataR(tmaterial_type, tnominal_size);
+    }
+
+    public void setLiveDataR(LiveData<Double> liveDataR) {
+        LiveDataR = liveDataR;
+    }
+
+    public LiveData<Double> getLiveDataX(String tmaterial_type, Double tnominal_size) {
+        return LiveDataX = resistivity_Dao.getLiveDataX(tmaterial_type, tnominal_size);
+    }
+
+    public void setLiveDataX(LiveData<Double> liveDataX) {
+        LiveDataX = liveDataX;
     }
 
     public List<String> getAllResistivitys() {

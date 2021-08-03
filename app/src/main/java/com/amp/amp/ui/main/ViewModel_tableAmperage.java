@@ -8,7 +8,7 @@ import com.amp.amp.data.App;
 
 import java.util.List;
 
-public class MainViewModel extends ViewModel {
+public class ViewModel_tableAmperage extends ViewModel {
 
     private Context instance;
 

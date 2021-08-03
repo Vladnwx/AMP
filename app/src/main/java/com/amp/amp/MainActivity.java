@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.amp.amp.ui.main.Fragment_tableAmperage;
+import com.amp.amp.ui.main.ViewModel_tableAmperage;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
                     .replace(R.id.container, Fragment_tableAmperage.newInstance())
                     .commitNow();
         }
+        ViewModel_tableAmperage model;
 
     }
 }
