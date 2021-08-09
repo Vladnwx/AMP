@@ -5,8 +5,11 @@
       <map>
         <entry key="..\:/Program Files/Android/sdk/platforms/android-30/data/res/layout/simple_spinner_dropdown_item.xml" value="0.2046875" />
         <entry key="..\:/Program Files/Android/sdk/platforms/android-30/data/res/layout/simple_spinner_item.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/User/AppData/Local/Android/Sdk/platforms/android-30/data/res/layout/simple_spinner_item.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/User/StudioProjects/AMP/app/src/main/res/layout/fragment_easy_amperage.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/User/StudioProjects/AMP/app/src/main/res/layout/main_activity.xml" value="0.13072916666666667" />
+        <entry key="..\:/Users/User/StudioProjects/AMP/app/src/main/res/layout/main_fragment.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/User/StudioProjects/AMP/app/src/main/res/layout/spinner.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/as/AndroidStudioProjects/AMP/app/src/main/res/layout-w1240dp/content_scrolling.xml" value="0.13152610441767068" />
         <entry key="..\:/Users/as/AndroidStudioProjects/AMP/app/src/main/res/layout-w936dp/content_scrolling.xml" value="0.153515625" />
         <entry key="..\:/Users/as/AndroidStudioProjects/AMP/app/src/main/res/layout/activity_scrolling.xml" value="0.2046875" />

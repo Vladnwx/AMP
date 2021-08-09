@@ -9,6 +9,8 @@ import com.amp.amp.ui.main.ViewModel_tableAmperage;
 
 public class MainActivity extends AppCompatActivity {
 
+    ViewModel_tableAmperage viewModel_tableAmperage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
                     .commitNow();
                                         }
 
-        ViewModel_tableAmperage model;
+                                                        }
 
-    }
 }

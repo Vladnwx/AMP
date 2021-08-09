@@ -1,10 +1,21 @@
 package com.amp.amp.ui.main;
 
 import android.content.Context;
+import android.widget.TextView;
 
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.amp.amp.data.App;
+import com.amp.amp.data.entity.Amperage;
+import com.amp.amp.data.entity.Amperage_short;
+import com.amp.amp.data.entity.Insulation_type;
+import com.amp.amp.data.entity.Material_type;
+import com.amp.amp.data.entity.Method_of_laying;
+import com.amp.amp.data.entity.Nominal_size;
+import com.amp.amp.data.entity.Number_of_core;
+import com.amp.amp.data.entity.Resistivity;
+import com.amp.amp.data.entity.Type_amperage;
+import com.amp.amp.data.entity.Type_of_environment;
 
 import java.util.List;
 
@@ -12,77 +23,24 @@ public class ViewModel_tableAmperage extends ViewModel {
 
     private Context instance;
 
-    private List<String> type_of_environments = App.getInstance().getType_of_environment_Dao().getAll();
-    //  private List<String> type_of_environments = App.getInstance().getAllType_of_environments();
-    private List<String> type_amperages = App.getInstance().getType_amperage_Dao().getAll();
-    private List<String> number_of_cores = App.getInstance().getNumber_of_cores_Dao().getAll();
-    private List<String> material_types = App.getInstance().getMaterial_type_Dao().getAll();
-    private List<String> insulation_types = App.getInstance().getInsulation_type_Dao().getAll();
-    private List<String> method_of_layings = App.getInstance().getMethod_of_laying_Dao().getAll();
-    private List<Double> nominal_sizes = App.getInstance().getNominal_size_Dao().getAll();
-    private Double R;
-    private Double X;
-    private int amperage_short;
-    private int amperage;
+    private LiveData<List<Type_of_environment>> AllLiveDataType_of_environments;
+    private LiveData<List<Type_amperage>> AllLiveDataType_amperages;
+    private LiveData<List<Method_of_laying>> AllLiveDataMethod_of_layings;
+    private LiveData<List<Number_of_core>> AllLiveDataNumber_of_cores;
+    private LiveData<List<Nominal_size>> AllLiveDataNominal_sizes;
+    private LiveData<List<Material_type>> AllLiveDataMaterial_types;
+    private LiveData<List<Insulation_type>> AllLiveDataInsulation_types;
+    private LiveData<Double> LiveDataR;
+    private LiveData<Double> LiveDataX;
+    private LiveData<List<Resistivity>> AllLiveDataResistivitys;
+    private LiveData<List<Amperage_short>> AllLiveDataAmperage_shorts;
+    private LiveData<List<Amperage>> AllLiveDataAmperages;
 
+    public TextView TextView_type_of_environment;
 
-    public List<String> getType_of_environments() {
-        return type_of_environments;
-    }
+    public ViewModel_tableAmperage() {
+       // TextView_type_of_environment.findViewById(R.id.TextView_type_of_environment);
+       // TextView_type_of_environment.setText("ЭТО ВСЕ VIEW");
 
-    public List<String> getType_amperages() {
-        return type_amperages;
-    }
-
-    public List<String> getNumber_of_cores() {
-        return number_of_cores;
-    }
-
-    public List<String> getMaterial_types() {
-        return material_types;
-    }
-
-    public List<String> getInsulation_types() {
-        return insulation_types;
-    }
-
-    public List<String> getMethod_of_layings() {
-        return method_of_layings;
-    }
-
-    public List<Double> getNominal_sizes() {
-        return nominal_sizes;
-    }
-
-    public Double getR() {
-        return R;
-    }
-
-    public void setR(Double r) {
-        R = r;
-    }
-
-    public Double getX() {
-        return X;
-    }
-
-    public void setX(Double x) {
-        X = x;
-    }
-
-    public int getAmperage_short() {
-        return amperage_short;
-    }
-
-    public void setAmperage_short(int amperage_short) {
-        this.amperage_short = amperage_short;
-    }
-
-    public int getAmperage() {
-        return amperage;
-    }
-
-    public void setAmperage(int amperage) {
-        this.amperage = amperage;
     }
 }

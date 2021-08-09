@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,7 +20,7 @@ import java.util.List;
 
 public class Fragment_tableAmperage extends Fragment {
 
-    private ViewModel_tableAmperage mViewModel;
+   // private ViewModel_tableAmperage mViewModel;
     private List<String> type_of_environments = App.getInstance().getType_of_environment_Dao().getAll();
     private List<String> type_amperages = App.getInstance().getType_amperage_Dao().getAll();
     private List<String> number_of_cores = App.getInstance().getNumber_of_cores_Dao().getAll();
@@ -62,25 +63,25 @@ public class Fragment_tableAmperage extends Fragment {
         TextView TextView_nominal_size = (TextView) view.findViewById(R.id.TextView_nominal_size);
 
         ArrayAdapter<String> adapter_type_of_environment = new ArrayAdapter<String>(App.getInstance(),
-                android.R.layout.simple_spinner_item, type_of_environments);
+                R.layout.spinner, type_of_environments);
 
         ArrayAdapter<String> adapter_type_amperage = new ArrayAdapter<String>(App.getInstance(),
-                android.R.layout.simple_spinner_item, type_amperages);
+                R.layout.spinner, type_amperages);
 
         ArrayAdapter<String> adapter_number_of_core = new ArrayAdapter<String>(App.getInstance(),
-                android.R.layout.simple_spinner_item, number_of_cores);
+                R.layout.spinner, number_of_cores);
 
         ArrayAdapter<String> adapter_material_type = new ArrayAdapter<String>(App.getInstance(),
-                android.R.layout.simple_spinner_item, material_types);
+                R.layout.spinner, material_types);
 
         ArrayAdapter<String> adapter_insulation_type = new ArrayAdapter<String>(App.getInstance(),
-                android.R.layout.simple_spinner_item, insulation_types);
+                R.layout.spinner, insulation_types);
 
         ArrayAdapter<String> adapter_method_of_laying = new ArrayAdapter<String>(App.getInstance(),
-                android.R.layout.simple_spinner_item, method_of_layings);
+                R.layout.spinner, method_of_layings);
 
         ArrayAdapter<Double> adapter_nominal_size = new ArrayAdapter<Double>(App.getInstance(),
-                android.R.layout.simple_spinner_item, nominal_sizes);
+                R.layout.spinner, nominal_sizes);
 
         adapter_type_of_environment.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         adapter_type_amperage.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -98,16 +99,19 @@ public class Fragment_tableAmperage extends Fragment {
         spinner_method_of_laying.setAdapter(adapter_method_of_laying);
         spinner_nominal_size.setAdapter(adapter_nominal_size);
 
+
+
         TextView_Resistance_R_value.setText(String.valueOf(App.getInstance().getResistivity_Dao().getR(spinner_material_type.getSelectedItem().toString(), Double.parseDouble(spinner_nominal_size.getSelectedItem().toString()))));
         TextView_Resistance_X_value.setText(String.valueOf(App.getInstance().getResistivity_Dao().getX(spinner_material_type.getSelectedItem().toString(), Double.parseDouble(spinner_nominal_size.getSelectedItem().toString()))));
 
 
-        TextView_type_of_environment.setText("Окружающая среда");
+       // TextView_type_of_environment.setText("Окружающая среда");
 
-        return view;
+       Toast.makeText(App.getInstance(), "Hello World", Toast.LENGTH_SHORT).show();
 
+       // Toast.makeText(App.getInstance(), mViewModel.getX().toString(), Toast.LENGTH_SHORT).show();
 
-    }
-
+                return view;
+   }
 
 }
