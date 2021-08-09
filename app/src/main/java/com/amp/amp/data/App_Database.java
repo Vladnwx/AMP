@@ -54,6 +54,30 @@ public abstract class App_Database extends RoomDatabase {
     public abstract Nominal_size_Dao nominal_size_Dao();
     public abstract Material_type_Dao material_type_Dao();
     public abstract Insulation_type_Dao insulation_type_Dao();
+    public abstract Resistivity_Dao resistivity_Dao();
+    public abstract Amperage_short_Dao amperage_short_Dao();
+    public abstract Amperage_Dao amperage_Dao();
+    private static volatile App_Database INSTANCE;
+    private static final int NUMBER_OF_THREADS = 4;
+    static final ExecutorService databaseWriteExecutor =
+            Executors.newFixedThreadPool(NUMBER_OF_THREADS);
+
+    static App_Database getDatabase(final Context context) {
+        if (INSTANCE == null) {
+            synchronized (App_Database.class) {
+                if (INSTANCE == null) {
+                    INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
+                            App_Database.class, "amperage")
+                            .allowMainThreadQueries()
+                            .addCallback(sRoomDatabaseCallback)
+                            //  .createFromAsset("amperage.db")
+                            .build();
+                }
+            }
+        }
+        return INSTANCE;
+    }
+
     private static final RoomDatabase.Callback sRoomDatabaseCallback = new RoomDatabase.Callback() {
         @Override
         public void onCreate(@NonNull SupportSQLiteDatabase db) {
@@ -105,32 +129,5 @@ public abstract class App_Database extends RoomDatabase {
             });
         }
     };
-
-    public abstract Amperage_short_Dao amperage_short_Dao();
-
-    public abstract Amperage_Dao amperage_Dao();
-
-    private static volatile App_Database INSTANCE;
-    private static final int NUMBER_OF_THREADS = 4;
-    static final ExecutorService databaseWriteExecutor =
-            Executors.newFixedThreadPool(NUMBER_OF_THREADS);
-
-    static App_Database getDatabase(final Context context) {
-        if (INSTANCE == null) {
-            synchronized (App_Database.class) {
-                if (INSTANCE == null) {
-                    INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
-                            App_Database.class, "amperage")
-                            .allowMainThreadQueries()
-                            .addCallback(sRoomDatabaseCallback)
-                            //  .createFromAsset("amperage.db")
-                            .build();
-                }
-            }
-        }
-        return INSTANCE;
-    }
-
-    public abstract Resistivity_Dao resistivity_Dao();
 
 }

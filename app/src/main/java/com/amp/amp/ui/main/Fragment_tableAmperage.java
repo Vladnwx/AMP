@@ -39,7 +39,6 @@ public class Fragment_tableAmperage extends Fragment {
 
         final View view = inflater.inflate(R.layout.main_fragment, container, false);
 
-        // mViewModel.spinner_insulation_type = (Spinner) view.findViewById(R.id.spinner_type_of_environment);
         Spinner spinner_type_of_environment = (Spinner) view.findViewById(R.id.spinner_type_of_environment);
         Spinner spinner_type_amperage = (Spinner) view.findViewById(R.id.spinner_type_amperage);
         Spinner spinner_number_of_core = (Spinner) view.findViewById(R.id.spinner_number_of_core);
