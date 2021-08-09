@@ -28,7 +28,7 @@
                 android:layout_marginStart="10sp"
                 android:layout_marginEnd="5sp"
                 android:gravity="center"
-                android:text="chislophase"
+                android:text="Count Phase"
                 android:textAlignment="center"
                 android:textSize="24sp" />
 
@@ -57,7 +57,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:gravity="center"
-                android:text="voltage"
+                android:text="Voltage"
                 android:textAlignment="center"
                 android:textSize="24sp" />
 
@@ -100,7 +100,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:gravity="center"
-                android:text="cos_phi"
+                android:text="Cos phi"
                 android:textAlignment="center"
                 android:textSize="24sp" />
 
@@ -134,7 +134,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:gravity="center"
-                android:text="power"
+                android:text="Power"
                 android:textAlignment="center"
                 android:textSize="24sp" />
 
@@ -147,7 +147,7 @@
                 android:layout_marginRight="5dp"
                 android:autofillHints="true"
                 android:gravity="center"
-                android:hint="nol"
+                android:hint="0"
                 android:inputType="numberDecimal"
                 android:textAlignment="center"
                 android:textSize="24sp" />
@@ -190,7 +190,17 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:gravity="center"
-                android:hint="nol_a"
+                android:hint="0"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+            <TextView
+                android:id="@+id/TextView_currentCount1"
+                android:layout_width="100sp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:hint="A"
                 android:textAlignment="center"
                 android:textSize="24sp" />
 
@@ -232,7 +242,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:gravity="center"
-                android:text="secheniejili"
+                android:text="Cable"
                 android:textAlignment="center"
                 android:textSize="24sp" />
 
@@ -242,7 +252,34 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:gravity="center"
-                android:hint="3x1_5"
+                android:hint="3"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:hint="x"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:hint="1.5"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:hint="mm2"
                 android:textAlignment="center"
                 android:textSize="24sp" />
 
@@ -263,7 +300,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:gravity="center"
-                android:text="dopustimiytok"
+                android:text="Amperage"
                 android:textAlignment="center"
                 android:textSize="24sp" />
 
@@ -273,7 +310,16 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:gravity="center"
-                android:hint="nol_a"
+                android:hint="0"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:hint="A"
                 android:textAlignment="center"
                 android:textSize="24sp" />
 

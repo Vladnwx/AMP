@@ -17,7 +17,8 @@ public class MainActivity extends AppCompatActivity {
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.container, Fragment_tableAmperage.newInstance())
                     .commitNow();
-        }
+                                        }
+
         ViewModel_tableAmperage model;
 
     }
