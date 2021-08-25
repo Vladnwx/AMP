@@ -28,7 +28,7 @@
                 android:layout_marginStart="10sp"
                 android:layout_marginEnd="5sp"
                 android:gravity="center"
-                android:text="Count Phase"
+                android:text="@string/count_phase"
                 android:textAlignment="center"
                 android:textSize="24sp" />
 
@@ -57,7 +57,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:gravity="center"
-                android:text="Voltage"
+                android:text="@string/voltage"
                 android:textAlignment="center"
                 android:textSize="24sp" />
 
@@ -100,7 +100,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:gravity="center"
-                android:text="Cos phi"
+                android:text="@string/cos_phi"
                 android:textAlignment="center"
                 android:textSize="24sp" />
 
@@ -134,7 +134,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:gravity="center"
-                android:text="Power"
+                android:text="@string/power"
                 android:textAlignment="center"
                 android:textSize="24sp" />
 
@@ -179,7 +179,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:gravity="center"
-                android:text="raschetniytok"
+                android:text="@string/raschetniytok"
                 android:textAlignment="center"
                 android:textSize="24sp" />
 
@@ -219,7 +219,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="podobratykabel"
+                android:text="@string/podobratykabel"
                 android:textAlignment="center"
                 android:textSize="24sp"
                 tools:layout_conversion_absoluteHeight="48dp"
@@ -242,7 +242,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:gravity="center"
-                android:text="Cable"
+                android:text="@string/cable"
                 android:textAlignment="center"
                 android:textSize="24sp" />
 
@@ -279,7 +279,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:gravity="center"
-                android:hint="mm2"
+                android:hint="@string/mm2"
                 android:textAlignment="center"
                 android:textSize="24sp" />
 
@@ -300,7 +300,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:gravity="center"
-                android:text="Amperage"
+                android:text="@string/amperage"
                 android:textAlignment="center"
                 android:textSize="24sp" />
 

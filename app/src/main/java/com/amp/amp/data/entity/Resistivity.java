@@ -10,7 +10,7 @@ import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 
 @Entity(foreignKeys = {@ForeignKey(entity = Material_type.class, parentColumns = "Material_type", childColumns = "material_type"),
-        @ForeignKey(entity = Nominal_size.class, parentColumns = "Nominal_size", childColumns = "nominal_size") })
+        @ForeignKey(entity = Nominal_size.class, parentColumns = "Nominal_size", childColumns = "nominal_size")  })
 
 public class Resistivity implements Parcelable {
 

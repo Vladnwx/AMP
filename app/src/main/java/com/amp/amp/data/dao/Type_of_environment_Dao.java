@@ -2,18 +2,14 @@ package com.amp.amp.data.dao;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
-import androidx.room.Delete;
-import androidx.room.Insert;
-import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
-import androidx.room.Update;
 
 import com.amp.amp.data.entity.Type_of_environment;
 
 import java.util.List;
 
 @Dao
-public interface Type_of_environment_Dao {
+public interface Type_of_environment_Dao extends BaseDao<Type_of_environment>{
     @Query("SELECT * FROM type_of_environment")
     List<String> getAll();
 
@@ -26,8 +22,11 @@ public interface Type_of_environment_Dao {
     @Query("DELETE FROM type_of_environment")
     void deleteAll();
 
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
-    void insert(Type_of_environment type_of_environment);
+    // @Query("DELETE FROM Type_of_environment.class.")
+   //  void deleteAll4(Type_of_environment type_of_environment);
+
+   // @Insert(onConflict = OnConflictStrategy.IGNORE)
+   // void insert(Type_of_environment type_of_environment);
 
     @Query("INSERT INTO type_of_environment (\n" +
             "                                    type_of_environment\n" +
@@ -51,9 +50,9 @@ public interface Type_of_environment_Dao {
             "                                );")
     void defaultgreate();*/
 
-    @Update
-    void update(Type_of_environment type_of_environment);
+  //  @Update
+  //  void update(Type_of_environment type_of_environment);
 
-    @Delete
-    void delete(Type_of_environment type_of_environment);
+  //  @Delete
+  //  void delete(Type_of_environment type_of_environment);
 }

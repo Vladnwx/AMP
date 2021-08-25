@@ -12,4 +12,13 @@
     <string name="resistance_r_ohm_km">Сопротивление R, Ом/км</string>
     <string name="resistance_x_ohm_km">Сопротивление X, Ом/км</string>
     <string name="conductor_cross_section">Поперечное сечение проводника</string>
+    <string name="count_phase">Число фаз</string>
+    <string name="voltage">Напряжение</string>
+    <string name="cos_phi">Косинус фи</string>
+    <string name="power">Мощность</string>
+    <string name="raschetniytok">Расчетный ток</string>
+    <string name="podobratykabel">Подобрать кабель</string>
+    <string name="cable">Кабель</string>
+    <string name="mm2">мм2</string>
+    <string name="amperage">Допустимый ток</string>
 </resources>

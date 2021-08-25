@@ -98,11 +98,13 @@ public class Fragment_tableAmperage extends Fragment {
         spinner_insulation_type.setAdapter(adapter_insulation_type);
         spinner_method_of_laying.setAdapter(adapter_method_of_laying);
         spinner_nominal_size.setAdapter(adapter_nominal_size);
+        spinner_nominal_size.setSelection(0);
 
 
-
-        TextView_Resistance_R_value.setText(String.valueOf(App.getInstance().getResistivity_Dao().getR(spinner_material_type.getSelectedItem().toString(), Double.parseDouble(spinner_nominal_size.getSelectedItem().toString()))));
+       // TextView_Resistance_R_value.setText(String.valueOf(App.getInstance().getResistivity_Dao().getR(spinner_material_type.getSelectedItem().toString(), Double.parseDouble(spinner_nominal_size.getSelectedItem().toString()))));
         TextView_Resistance_X_value.setText(String.valueOf(App.getInstance().getResistivity_Dao().getX(spinner_material_type.getSelectedItem().toString(), Double.parseDouble(spinner_nominal_size.getSelectedItem().toString()))));
+
+
 
 
        // TextView_type_of_environment.setText("Окружающая среда");
@@ -110,6 +112,8 @@ public class Fragment_tableAmperage extends Fragment {
        Toast.makeText(App.getInstance(), "Hello World", Toast.LENGTH_SHORT).show();
 
        // Toast.makeText(App.getInstance(), mViewModel.getX().toString(), Toast.LENGTH_SHORT).show();
+
+
 
                 return view;
    }
