@@ -2,18 +2,14 @@ package com.amp.amp.data.dao;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
-import androidx.room.Delete;
-import androidx.room.Insert;
-import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
-import androidx.room.Update;
 
 import com.amp.amp.data.entity.Resistivity;
 
 import java.util.List;
 
 @Dao
-public interface Resistivity_Dao {
+public interface Resistivity_Dao extends BaseDao<Resistivity>{
 
     // @Query("SELECT * FROM resistivity")
     // List<String> getAll();
@@ -39,15 +35,6 @@ public interface Resistivity_Dao {
     @Query("DELETE FROM resistivity")
     void deleteAll();
 
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
-    void insert(Resistivity resistivity);
-
-
-    @Update
-    void update(Resistivity resistivity);
-
-    @Delete
-    void delete(Resistivity resistivity);
 
     @Query("INSERT INTO resistivity (\n" +
             "                            p,\n" +

@@ -2,18 +2,14 @@ package com.amp.amp.data.dao;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
-import androidx.room.Delete;
-import androidx.room.Insert;
-import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
-import androidx.room.Update;
 
 import com.amp.amp.data.entity.Type_amperage;
 
 import java.util.List;
 
 @Dao
-public interface Type_amperage_Dao {
+public interface Type_amperage_Dao extends BaseDao<Type_amperage> {
     @Query("SELECT * FROM type_amperage")
     List<String> getAll();
 
@@ -26,8 +22,6 @@ public interface Type_amperage_Dao {
     @Query("DELETE FROM type_amperage")
     void deleteAll();
 
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
-    void insert(Type_amperage type_amperage);
 
     @Query("INSERT INTO type_amperage (\n" +
             "                              type_amperage\n" +
@@ -40,10 +34,5 @@ public interface Type_amperage_Dao {
             "                          );")
     void defaultgreate();
 
-    @Update
-    void update(Type_amperage type_amperage);
-
-    @Delete
-    void delete(Type_amperage type_amperage);
 
 }

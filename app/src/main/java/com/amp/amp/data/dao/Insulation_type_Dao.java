@@ -2,18 +2,14 @@ package com.amp.amp.data.dao;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
-import androidx.room.Delete;
-import androidx.room.Insert;
-import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
-import androidx.room.Update;
 
 import com.amp.amp.data.entity.Insulation_type;
 
 import java.util.List;
 
 @Dao
-public interface Insulation_type_Dao {
+public interface Insulation_type_Dao extends BaseDao<Insulation_type> {
     @Query("SELECT * FROM insulation_type")
     List<String> getAll();
 
@@ -26,9 +22,6 @@ public interface Insulation_type_Dao {
     @Query("DELETE FROM insulation_type")
     void deleteAll();
 
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
-    void insert(Insulation_type insulation_type);
-
     @Query("INSERT INTO insulation_type (\n" +
             "                                insulation_type\n" +
             "                            )\n" +
@@ -40,10 +33,5 @@ public interface Insulation_type_Dao {
             "                            );")
     void defaultgreate();
 
-    @Update
-    void update(Insulation_type insulation_type);
-
-    @Delete
-    void delete(Insulation_type insulation_type);
 
 }

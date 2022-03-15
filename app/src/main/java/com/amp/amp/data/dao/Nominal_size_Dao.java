@@ -2,18 +2,14 @@ package com.amp.amp.data.dao;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
-import androidx.room.Delete;
-import androidx.room.Insert;
-import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
-import androidx.room.Update;
 
 import com.amp.amp.data.entity.Nominal_size;
 
 import java.util.List;
 
 @Dao
-public interface Nominal_size_Dao {
+public interface Nominal_size_Dao extends BaseDao<Nominal_size> {
 
     @Query("SELECT * FROM nominal_size")
     List<Double> getAll();
@@ -26,9 +22,6 @@ public interface Nominal_size_Dao {
 
     @Query("DELETE FROM nominal_size")
     void deleteAll();
-
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
-    void insert(Nominal_size nominal_size);
 
     @Query("INSERT INTO nominal_size (\n" +
             "                             nominal_size\n" +
@@ -103,11 +96,5 @@ public interface Nominal_size_Dao {
             "                             1000\n" +
             "                         );\n")
     void defaultgreate();
-
-    @Update
-    void update(Nominal_size nominal_size);
-
-    @Delete
-    void delete(Nominal_size nominal_size);
 
 }

@@ -2,18 +2,14 @@ package com.amp.amp.data.dao;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
-import androidx.room.Delete;
-import androidx.room.Insert;
-import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
-import androidx.room.Update;
 
 import com.amp.amp.data.entity.Amperage_short;
 
 import java.util.List;
 
 @Dao
-public interface Amperage_short_Dao {
+public interface Amperage_short_Dao extends BaseDao<Amperage_short> {
 
     // @Query("SELECT * FROM amperage_short")
     // List<String> getAll();
@@ -26,9 +22,6 @@ public interface Amperage_short_Dao {
 
     @Query("DELETE FROM amperage_short")
     void deleteAll();
-
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
-    void insert(Amperage_short amperage_short);
 
     @Query("INSERT INTO amperage_short (\n" +
             "                               amperage_short,\n" +
@@ -541,11 +534,5 @@ public interface Amperage_short_Dao {
             "                               1000\n" +
             "                           );")
     void defaultgreate();
-
-    @Update
-    void update(Amperage_short amperage_short);
-
-    @Delete
-    void delete(Amperage_short amperage_short);
 
 }

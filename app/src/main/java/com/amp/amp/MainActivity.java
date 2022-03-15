@@ -9,6 +9,7 @@ import com.amp.amp.ui.main.ViewModel_tableAmperage;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String TAG = "myLogs";
     ViewModel_tableAmperage viewModel_tableAmperage;
 
     @Override

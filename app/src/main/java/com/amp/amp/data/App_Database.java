@@ -95,6 +95,7 @@ public abstract class App_Database extends RoomDatabase {
                 Amperage_Dao amperage_Dao = INSTANCE.amperage_Dao();
                 Resistivity_Dao resistivity_dao = INSTANCE.resistivity_Dao();
 
+
                 type_of_environment_dao.deleteAll();
                 type_amperage_Dao.deleteAll();
                 method_of_laying_Dao.deleteAll();

@@ -62,8 +62,7 @@ public class Fragment_tableAmperage extends Fragment {
         TextView TextView_Resistance_X_value = (TextView) view.findViewById(R.id.TextView_Resistance_X_value);
         TextView TextView_nominal_size = (TextView) view.findViewById(R.id.TextView_nominal_size);
 
-        ArrayAdapter<String> adapter_type_of_environment = new ArrayAdapter<String>(App.getInstance(),
-                R.layout.spinner, type_of_environments);
+        ArrayAdapter<String> adapter_type_of_environment = new ArrayAdapter<String>(App.getInstance(), R.layout.spinner, type_of_environments);
 
         ArrayAdapter<String> adapter_type_amperage = new ArrayAdapter<String>(App.getInstance(),
                 R.layout.spinner, type_amperages);

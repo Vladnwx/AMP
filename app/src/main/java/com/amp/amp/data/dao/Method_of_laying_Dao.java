@@ -2,18 +2,14 @@ package com.amp.amp.data.dao;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
-import androidx.room.Delete;
-import androidx.room.Insert;
-import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
-import androidx.room.Update;
 
 import com.amp.amp.data.entity.Method_of_laying;
 
 import java.util.List;
 
 @Dao
-public interface Method_of_laying_Dao {
+public interface Method_of_laying_Dao extends BaseDao<Method_of_laying> {
   @Query("SELECT * FROM Method_of_laying")
   List<String> getAll();
 
@@ -25,10 +21,6 @@ public interface Method_of_laying_Dao {
 
     @Query("DELETE FROM Method_of_laying")
     void deleteAll();
-
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
-    void insert(Method_of_laying methodoflaying);
-
     @Query("INSERT INTO method_of_laying (\n" +
             "                                 method_of_laying\n" +
             "                             )\n" +
@@ -39,11 +31,5 @@ public interface Method_of_laying_Dao {
             "                                 'bundle'\n" +
             "                             );\n")
     void defaultgreate();
-
-    @Update
-    void update(Method_of_laying methodoflaying);
-
-    @Delete
-    void delete(Method_of_laying methodoflaying);
 
 }

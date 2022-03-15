@@ -9,7 +9,7 @@ import com.amp.amp.data.entity.Type_of_environment;
 import java.util.List;
 
 @Dao
-public interface Type_of_environment_Dao extends BaseDao<Type_of_environment>{
+public interface Type_of_environment_Dao extends BaseDao<Type_of_environment> {
     @Query("SELECT * FROM type_of_environment")
     List<String> getAll();
 
@@ -55,4 +55,7 @@ public interface Type_of_environment_Dao extends BaseDao<Type_of_environment>{
 
   //  @Delete
   //  void delete(Type_of_environment type_of_environment);
+
+
 }
+
